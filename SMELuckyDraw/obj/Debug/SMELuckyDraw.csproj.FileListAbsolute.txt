@@ -19,3 +19,6 @@ E:\Projects\LuckyDraw\SMELuckyDraw\obj\Debug\SMELuckyDraw.Properties.Resources.r
 E:\Projects\LuckyDraw\SMELuckyDraw\obj\Debug\SMELuckyDraw.csproj.GenerateResource.Cache
 E:\Projects\LuckyDraw\SMELuckyDraw\obj\Debug\SMELuckyDraw.exe
 E:\Projects\LuckyDraw\SMELuckyDraw\obj\Debug\SMELuckyDraw.pdb
+E:\Zhenjun\GitHub\LuckyDraw\SMELuckyDraw\bin\Debug\SMELuckyDraw.exe.config
+E:\Zhenjun\GitHub\LuckyDraw\SMELuckyDraw\obj\Debug\SMELuckyDraw.exe
+E:\Zhenjun\GitHub\LuckyDraw\SMELuckyDraw\obj\Debug\SMELuckyDraw.pdb
