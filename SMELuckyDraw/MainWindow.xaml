@@ -2,9 +2,12 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:my="clr-namespace:SMELuckyDraw.UC" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d"
-        Title="MainWindow" Height="768" Width="768" WindowStyle="SingleBorderWindow" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" >
+        Title="MainWindow" Height="768" Width="1024" WindowStyle="SingleBorderWindow" WindowStartupLocation="CenterScreen" >
+    <Window.Background>
+        <ImageBrush ImageSource="image/bg.jpg"/>
+    </Window.Background>
     <Grid>
-        <Grid.Background>
+        <!--<Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                 <GradientStop Color="#FFE56E1B" Offset="0.97"/>
                 <GradientStop Color="#FF763600" Offset="1"/>
@@ -14,13 +17,17 @@
                 <GradientStop Color="#FEEFB22C" Offset="0.569"/>
                 <GradientStop Color="#FEFCD397" Offset="0.022"/>
             </LinearGradientBrush>
-        </Grid.Background>
+        </Grid.Background>-->
         <Grid.RowDefinitions>
             <RowDefinition Height="8*" />
             <RowDefinition Height="40*"/>
-            <RowDefinition Height="260*" />
+            <RowDefinition Height="50*" />
+            <RowDefinition Height="200*" />
+            <RowDefinition Height="50*" />
+            <RowDefinition Height="30*" />
+            <RowDefinition Height="8*" />
         </Grid.RowDefinitions>
-        <Button Grid.Row="1" Content="开始" Height="36" HorizontalAlignment="Left" Margin="57,0,0,292" x:Name="buttonStart" VerticalAlignment="Center" Width="82" Click="buttonStart_Click" FontSize="16" Grid.RowSpan="2">
+        <Button Grid.Row="4" Content="开始" Height="36" HorizontalAlignment="Center" Margin="-100,0,0,0" x:Name="buttonStart" VerticalAlignment="Center" Width="82" Click="buttonStart_Click" FontSize="16">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
                     <GradientStop Color="#FFF3F3F3" Offset="0"/>
@@ -30,7 +37,7 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <Button Grid.Row="1" Content="停止" Height="36" HorizontalAlignment="Left" Margin="155,0,0,292" x:Name="buttonStop" VerticalAlignment="Center" Width="82" Click="buttonStop_Click" IsEnabled="False" FontSize="16" Grid.RowSpan="2">
+        <Button Grid.Row="4" Content="停止" Height="36" HorizontalAlignment="Center" Margin="100,0,0,0" x:Name="buttonStop" VerticalAlignment="Center" Width="82" Click="buttonStop_Click" IsEnabled="False" FontSize="16">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
                     <GradientStop Color="#FFF3F3F3" Offset="0"/>
@@ -40,7 +47,7 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <TextBox Grid.Row="1" Height="28" HorizontalAlignment="Left" Margin="434,4,0,3" x:Name="textBoxFinalPrice" VerticalAlignment="Center" Width="102" IsReadOnly="True" FontSize="16" TextAlignment="Right" Foreground="Red" BorderThickness="2" >
+        <!--<TextBox Grid.Row="1" Height="28" HorizontalAlignment="Left" Margin="434,4,0,3" x:Name="textBoxFinalPrice" VerticalAlignment="Center" Width="102" IsReadOnly="True" FontSize="16" TextAlignment="Right" Foreground="Red" BorderThickness="2" >
             <TextBox.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FF979797"/>
@@ -58,8 +65,13 @@
                     <GradientStop Color="#FEAF5800" Offset="0.655"/>
                 </LinearGradientBrush>
             </TextBox.BorderBrush>
-        </TextBox>
-        <Label Grid.Row="1" Content="您的幸运价格是" Height="35.862" HorizontalAlignment="Left" Margin="307,0,0,292" x:Name="labelFinalPrice" VerticalAlignment="Center" Width="127" FontSize="16" Grid.RowSpan="2" Foreground="#FFB64B00" d:LayoutOverrides="GridBox" />
+        </TextBox>-->
+        <Label Name="lbMsg" Grid.Row="5" Content="" HorizontalAlignment="Center" VerticalAlignment="Center"></Label>
+        <!--<Label Grid.Row="1" Content="您的幸运价格是" Height="35.862" HorizontalAlignment="Left" Margin="307,0,0,292" x:Name="labelFinalPrice" VerticalAlignment="Center" Width="127" FontSize="16" Grid.RowSpan="2" Foreground="#FFB64B00" d:LayoutOverrides="GridBox" />-->
         <my:NumberGroup Grid.Row="2" Height="311" HorizontalAlignment="Center" x:Name="numberGroupMain" Width="589" Grid.RowSpan="2" HorizontalContentAlignment="Center" VerticalAlignment="Center" Margin="0,5,0,12" />
+        <Label Name="lbWinner" Content="Winner" HorizontalAlignment="Center" Margin="0" Grid.Row="2" VerticalAlignment="Center" FontSize="48" FontWeight="Bold" Foreground="#FF6BBA70"/>
+        <Image HorizontalAlignment="Left" Height="66" Margin="10,6,0,0" Grid.Row="1" VerticalAlignment="Top" Width="132" Source="image/sap.png" >
+        </Image>
+        <Label Content="SME Lucky Draw - 2015" HorizontalAlignment="Left" Margin="150,10,0,9" Grid.Row="1" VerticalAlignment="Center" FontSize="36" FontFamily="Segoe UI" FontWeight="Bold" Foreground="#FF4096EE"/>
     </Grid>
 </Window>

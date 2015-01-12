@@ -13,6 +13,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Threading;
+using SMELuckyDraw.Logic;
+using SMELuckyDraw.Model;
 
 namespace SMELuckyDraw
 {
@@ -21,14 +23,18 @@ namespace SMELuckyDraw
     /// </summary>
     public partial class MainWindow : Window
     {
+        private DrawLogic _logic = new DrawLogic();
         private DispatcherTimer timer = new DispatcherTimer();
         private int finalValue = 0;
+        private string finalValueDesc = "";
 
         public MainWindow()
         {
             InitializeComponent();
             timer.Interval = TimeSpan.FromSeconds(1);
             timer.Tick += new EventHandler(timer_Tick);
+
+            _logic.Init();
         }
 
         //监视转动是否停止，如果停止，显示价格
@@ -36,7 +42,8 @@ namespace SMELuckyDraw
         {
             if (numberGroupMain.IsStoped())
             {
-                textBoxFinalPrice.Text = "￥" + finalValue.ToString("F2");//显示最终金额
+                // textBoxFinalPrice.Text = "￥" + finalValue.ToString("F2");//显示最终金额
+                lbWinner.Content = finalValueDesc;
                 timer.Stop();
                 buttonStart.IsEnabled = true;
             }
@@ -45,10 +52,17 @@ namespace SMELuckyDraw
         //开始按钮点击
         private void buttonStart_Click(object sender, RoutedEventArgs e)
         {
+            if (!_logic.IsAbleToDraw())
+            {
+                showCannotDrawMsg();
+                return;
+            }
+
             buttonStart.IsEnabled = false;
             buttonStop.IsEnabled = true;
             numberGroupMain.TurnStart();
-            textBoxFinalPrice.Text = "";
+            //textBoxFinalPrice.Text = "";
+            lbWinner.Content = "Winner";
             timer.Stop();
         }
 
@@ -56,10 +70,27 @@ namespace SMELuckyDraw
         private void buttonStop_Click(object sender, RoutedEventArgs e)
         {
             buttonStop.IsEnabled = false;
-            Random random = new Random();
-            finalValue = random.Next(100000);
-            numberGroupMain.TurnStop(finalValue);//使数字组停止
-            timer.Start();
+            //Random random = new Random();
+            //finalValue = random.Next(100000);
+            Candidate cdt = _logic.DoDraw();
+            if (cdt != null)
+            {
+                finalValueDesc = cdt.Id + "   " + cdt.Name;
+                finalValue = Convert.ToInt32(cdt.Id.Substring(1)); //remove first char
+                numberGroupMain.TurnStop(finalValue);//使数字组停止
+                timer.Start();
+            }
+            else
+            {
+                showCannotDrawMsg();
+                numberGroupMain.TurnStop(finalValue);//使数字组停止
+                timer.Stop();
+            }
+        }
+
+        private void showCannotDrawMsg()
+        {
+            lbMsg.Content = "No candidate left!";
         }
     }
 }

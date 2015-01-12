@@ -1,0 +1,24 @@
+C:\Users\HiClyde\Documents\GitHub\LuckyDraw\SMELuckyDraw\bin\Release\SMELuckyDraw.exe.config
+C:\Users\HiClyde\Documents\GitHub\LuckyDraw\SMELuckyDraw\bin\Release\excel\put name list excel file here and change the excel name in config file which in parent folder.txt
+C:\Users\HiClyde\Documents\GitHub\LuckyDraw\SMELuckyDraw\bin\Release\SMELuckyDraw.exe
+C:\Users\HiClyde\Documents\GitHub\LuckyDraw\SMELuckyDraw\bin\Release\SMELuckyDraw.pdb
+C:\Users\HiClyde\Documents\GitHub\LuckyDraw\SMELuckyDraw\bin\Release\log4net.dll
+C:\Users\HiClyde\Documents\GitHub\LuckyDraw\SMELuckyDraw\bin\Release\log4net.xml
+C:\Users\HiClyde\Documents\GitHub\LuckyDraw\SMELuckyDraw\obj\Release\UC\NumberGroup.baml
+C:\Users\HiClyde\Documents\GitHub\LuckyDraw\SMELuckyDraw\obj\Release\UC\NumberItem.baml
+C:\Users\HiClyde\Documents\GitHub\LuckyDraw\SMELuckyDraw\obj\Release\UC\NumberPanel.baml
+C:\Users\HiClyde\Documents\GitHub\LuckyDraw\SMELuckyDraw\obj\Release\MainWindow.g.cs
+C:\Users\HiClyde\Documents\GitHub\LuckyDraw\SMELuckyDraw\obj\Release\UC\NumberGroup.g.cs
+C:\Users\HiClyde\Documents\GitHub\LuckyDraw\SMELuckyDraw\obj\Release\UC\NumberItem.g.cs
+C:\Users\HiClyde\Documents\GitHub\LuckyDraw\SMELuckyDraw\obj\Release\UC\NumberPanel.g.cs
+C:\Users\HiClyde\Documents\GitHub\LuckyDraw\SMELuckyDraw\obj\Release\App.g.cs
+C:\Users\HiClyde\Documents\GitHub\LuckyDraw\SMELuckyDraw\obj\Release\SMELuckyDraw_Content.g.cs
+C:\Users\HiClyde\Documents\GitHub\LuckyDraw\SMELuckyDraw\obj\Release\GeneratedInternalTypeHelper.g.cs
+C:\Users\HiClyde\Documents\GitHub\LuckyDraw\SMELuckyDraw\obj\Release\SMELuckyDraw_MarkupCompile.cache
+C:\Users\HiClyde\Documents\GitHub\LuckyDraw\SMELuckyDraw\obj\Release\SMELuckyDraw_MarkupCompile.lref
+C:\Users\HiClyde\Documents\GitHub\LuckyDraw\SMELuckyDraw\obj\Release\MainWindow.baml
+C:\Users\HiClyde\Documents\GitHub\LuckyDraw\SMELuckyDraw\obj\Release\SMELuckyDraw.g.resources
+C:\Users\HiClyde\Documents\GitHub\LuckyDraw\SMELuckyDraw\obj\Release\SMELuckyDraw.Properties.Resources.resources
+C:\Users\HiClyde\Documents\GitHub\LuckyDraw\SMELuckyDraw\obj\Release\SMELuckyDraw.csproj.GenerateResource.Cache
+C:\Users\HiClyde\Documents\GitHub\LuckyDraw\SMELuckyDraw\obj\Release\SMELuckyDraw.exe
+C:\Users\HiClyde\Documents\GitHub\LuckyDraw\SMELuckyDraw\obj\Release\SMELuckyDraw.pdb
