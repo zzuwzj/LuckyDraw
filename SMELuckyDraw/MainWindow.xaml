@@ -1,8 +1,65 @@
 ﻿<Window x:Class="SMELuckyDraw.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="MainWindow" Height="350" Width="525">
+        xmlns:my="clr-namespace:SMELuckyDraw.UC" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d"
+        Title="MainWindow" Height="768" Width="768" WindowStyle="SingleBorderWindow" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" >
     <Grid>
-        
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FFE56E1B" Offset="0.97"/>
+                <GradientStop Color="#FF763600" Offset="1"/>
+                <GradientStop Color="#FF784700"/>
+                <GradientStop Color="#FEF3DAAD" Offset="0.328"/>
+                <GradientStop Color="#FEF7C434" Offset="0.56"/>
+                <GradientStop Color="#FEEFB22C" Offset="0.569"/>
+                <GradientStop Color="#FEFCD397" Offset="0.022"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="8*" />
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="260*" />
+        </Grid.RowDefinitions>
+        <Button Grid.Row="1" Content="开始" Height="36" HorizontalAlignment="Left" Margin="57,0,0,292" x:Name="buttonStart" VerticalAlignment="Center" Width="82" Click="buttonStart_Click" FontSize="16" Grid.RowSpan="2">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF3F3F3" Offset="0"/>
+                    <GradientStop Color="#FFEBEBEB" Offset="0.5"/>
+                    <GradientStop Color="#FFDDDDDD" Offset="0.5"/>
+                    <GradientStop Color="#FFF9E1C3" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button Grid.Row="1" Content="停止" Height="36" HorizontalAlignment="Left" Margin="155,0,0,292" x:Name="buttonStop" VerticalAlignment="Center" Width="82" Click="buttonStop_Click" IsEnabled="False" FontSize="16" Grid.RowSpan="2">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF3F3F3" Offset="0"/>
+                    <GradientStop Color="#FFEBEBEB" Offset="0.5"/>
+                    <GradientStop Color="#FFDDDDDD" Offset="0.5"/>
+                    <GradientStop Color="#FFF9E1C3" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <TextBox Grid.Row="1" Height="28" HorizontalAlignment="Left" Margin="434,4,0,3" x:Name="textBoxFinalPrice" VerticalAlignment="Center" Width="102" IsReadOnly="True" FontSize="16" TextAlignment="Right" Foreground="Red" BorderThickness="2" >
+            <TextBox.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF979797"/>
+                    <GradientStop Color="#FFD0D0D0" Offset="1"/>
+                    <GradientStop Color="#FFEBEBEB" Offset="0.263"/>
+                    <GradientStop Color="#FFEDEDED" Offset="0.841"/>
+                    <GradientStop Color="White" Offset="0.517"/>
+                </LinearGradientBrush>
+            </TextBox.Background>
+            <TextBox.BorderBrush>
+                <LinearGradientBrush EndPoint="0,1" MappingMode="RelativeToBoundingBox" StartPoint="0,0">
+                    <GradientStop Color="#FFED9426"/>
+                    <GradientStop Color="#FFC46310" Offset="1"/>
+                    <GradientStop Color="#FFD98933" Offset="0.612"/>
+                    <GradientStop Color="#FEAF5800" Offset="0.655"/>
+                </LinearGradientBrush>
+            </TextBox.BorderBrush>
+        </TextBox>
+        <Label Grid.Row="1" Content="您的幸运价格是" Height="35.862" HorizontalAlignment="Left" Margin="307,0,0,292" x:Name="labelFinalPrice" VerticalAlignment="Center" Width="127" FontSize="16" Grid.RowSpan="2" Foreground="#FFB64B00" d:LayoutOverrides="GridBox" />
+        <my:NumberGroup Grid.Row="2" Height="311" HorizontalAlignment="Center" x:Name="numberGroupMain" Width="589" Grid.RowSpan="2" HorizontalContentAlignment="Center" VerticalAlignment="Center" Margin="0,5,0,12" />
     </Grid>
 </Window>
