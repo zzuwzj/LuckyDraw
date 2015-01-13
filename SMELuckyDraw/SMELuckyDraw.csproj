@@ -32,6 +32,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>goat.ico</ApplicationIcon>
@@ -136,6 +137,7 @@
     <Content Include="excel\put name list excel file here and change the excel name in config file which in parent folder.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Resource Include="image\SAP-Logo-144x71.jpg" />
     <Resource Include="image\sap.png" />
     <Resource Include="image\bg.jpg" />
     <Resource Include="image\goat.ico" />

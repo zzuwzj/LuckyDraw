@@ -48,3 +48,24 @@ C:\Users\HiClyde\Documents\GitHub\LuckyDraw\SMELuckyDraw\bin\Debug\log4net.xml
 C:\Users\HiClyde\Documents\GitHub\LuckyDraw\SMELuckyDraw\bin\Debug\excel\put name list excel file here and change the excel name in config file which in parent folder.txt
 C:\Users\HiClyde\Documents\GitHub\LuckyDraw\SMELuckyDraw\obj\Debug\SMELuckyDraw_Content.g.cs
 C:\Users\HiClyde\Documents\GitHub\LuckyDraw\SMELuckyDraw\bin\Debug\excel\namelist.xlsx
+E:\Zhenjun\GitHub\LuckyDraw\SMELuckyDraw\bin\Debug\excel\put name list excel file here and change the excel name in config file which in parent folder.txt
+E:\Zhenjun\GitHub\LuckyDraw\SMELuckyDraw\bin\Debug\excel\namelist.xlsx
+E:\Zhenjun\GitHub\LuckyDraw\SMELuckyDraw\bin\Debug\SMELuckyDraw.exe
+E:\Zhenjun\GitHub\LuckyDraw\SMELuckyDraw\bin\Debug\SMELuckyDraw.pdb
+E:\Zhenjun\GitHub\LuckyDraw\SMELuckyDraw\obj\Debug\SMELuckyDraw.csprojResolveAssemblyReference.cache
+E:\Zhenjun\GitHub\LuckyDraw\SMELuckyDraw\obj\Debug\UC\NumberGroup.baml
+E:\Zhenjun\GitHub\LuckyDraw\SMELuckyDraw\obj\Debug\UC\NumberItem.baml
+E:\Zhenjun\GitHub\LuckyDraw\SMELuckyDraw\obj\Debug\UC\NumberPanel.baml
+E:\Zhenjun\GitHub\LuckyDraw\SMELuckyDraw\obj\Debug\MainWindow.g.cs
+E:\Zhenjun\GitHub\LuckyDraw\SMELuckyDraw\obj\Debug\UC\NumberGroup.g.cs
+E:\Zhenjun\GitHub\LuckyDraw\SMELuckyDraw\obj\Debug\UC\NumberItem.g.cs
+E:\Zhenjun\GitHub\LuckyDraw\SMELuckyDraw\obj\Debug\UC\NumberPanel.g.cs
+E:\Zhenjun\GitHub\LuckyDraw\SMELuckyDraw\obj\Debug\App.g.cs
+E:\Zhenjun\GitHub\LuckyDraw\SMELuckyDraw\obj\Debug\SMELuckyDraw_Content.g.cs
+E:\Zhenjun\GitHub\LuckyDraw\SMELuckyDraw\obj\Debug\GeneratedInternalTypeHelper.g.cs
+E:\Zhenjun\GitHub\LuckyDraw\SMELuckyDraw\obj\Debug\SMELuckyDraw_MarkupCompile.cache
+E:\Zhenjun\GitHub\LuckyDraw\SMELuckyDraw\obj\Debug\SMELuckyDraw_MarkupCompile.lref
+E:\Zhenjun\GitHub\LuckyDraw\SMELuckyDraw\obj\Debug\MainWindow.baml
+E:\Zhenjun\GitHub\LuckyDraw\SMELuckyDraw\obj\Debug\SMELuckyDraw.g.resources
+E:\Zhenjun\GitHub\LuckyDraw\SMELuckyDraw\obj\Debug\SMELuckyDraw.Properties.Resources.resources
+E:\Zhenjun\GitHub\LuckyDraw\SMELuckyDraw\obj\Debug\SMELuckyDraw.csproj.GenerateResource.Cache

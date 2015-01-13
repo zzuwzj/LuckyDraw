@@ -91,7 +91,6 @@ namespace SMELuckyDraw.Logic
         public void ResetApp()
         {
             LogHelper.DEBUG("ResetApp");
-            _candidateList.Clear();
             _exceptionList.Clear();
             _maxCount = 0;
         }        

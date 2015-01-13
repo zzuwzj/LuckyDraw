@@ -22,3 +22,27 @@ C:\Users\HiClyde\Documents\GitHub\LuckyDraw\SMELuckyDraw\obj\Release\SMELuckyDra
 C:\Users\HiClyde\Documents\GitHub\LuckyDraw\SMELuckyDraw\obj\Release\SMELuckyDraw.csproj.GenerateResource.Cache
 C:\Users\HiClyde\Documents\GitHub\LuckyDraw\SMELuckyDraw\obj\Release\SMELuckyDraw.exe
 C:\Users\HiClyde\Documents\GitHub\LuckyDraw\SMELuckyDraw\obj\Release\SMELuckyDraw.pdb
+E:\Zhenjun\GitHub\LuckyDraw\SMELuckyDraw\bin\Release\excel\put name list excel file here and change the excel name in config file which in parent folder.txt
+E:\Zhenjun\GitHub\LuckyDraw\SMELuckyDraw\bin\Release\excel\namelist.xlsx
+E:\Zhenjun\GitHub\LuckyDraw\SMELuckyDraw\bin\Release\SMELuckyDraw.exe.config
+E:\Zhenjun\GitHub\LuckyDraw\SMELuckyDraw\bin\Release\SMELuckyDraw.exe
+E:\Zhenjun\GitHub\LuckyDraw\SMELuckyDraw\bin\Release\SMELuckyDraw.pdb
+E:\Zhenjun\GitHub\LuckyDraw\SMELuckyDraw\obj\Release\UC\NumberGroup.baml
+E:\Zhenjun\GitHub\LuckyDraw\SMELuckyDraw\obj\Release\UC\NumberItem.baml
+E:\Zhenjun\GitHub\LuckyDraw\SMELuckyDraw\obj\Release\UC\NumberPanel.baml
+E:\Zhenjun\GitHub\LuckyDraw\SMELuckyDraw\obj\Release\MainWindow.g.cs
+E:\Zhenjun\GitHub\LuckyDraw\SMELuckyDraw\obj\Release\UC\NumberGroup.g.cs
+E:\Zhenjun\GitHub\LuckyDraw\SMELuckyDraw\obj\Release\UC\NumberItem.g.cs
+E:\Zhenjun\GitHub\LuckyDraw\SMELuckyDraw\obj\Release\UC\NumberPanel.g.cs
+E:\Zhenjun\GitHub\LuckyDraw\SMELuckyDraw\obj\Release\App.g.cs
+E:\Zhenjun\GitHub\LuckyDraw\SMELuckyDraw\obj\Release\SMELuckyDraw_Content.g.cs
+E:\Zhenjun\GitHub\LuckyDraw\SMELuckyDraw\obj\Release\GeneratedInternalTypeHelper.g.cs
+E:\Zhenjun\GitHub\LuckyDraw\SMELuckyDraw\obj\Release\SMELuckyDraw_MarkupCompile.cache
+E:\Zhenjun\GitHub\LuckyDraw\SMELuckyDraw\obj\Release\SMELuckyDraw_MarkupCompile.lref
+E:\Zhenjun\GitHub\LuckyDraw\SMELuckyDraw\obj\Release\MainWindow.baml
+E:\Zhenjun\GitHub\LuckyDraw\SMELuckyDraw\obj\Release\SMELuckyDraw.g.resources
+E:\Zhenjun\GitHub\LuckyDraw\SMELuckyDraw\obj\Release\SMELuckyDraw.Properties.Resources.resources
+E:\Zhenjun\GitHub\LuckyDraw\SMELuckyDraw\obj\Release\SMELuckyDraw.csproj.GenerateResource.Cache
+E:\Zhenjun\GitHub\LuckyDraw\SMELuckyDraw\obj\Release\SMELuckyDraw.exe
+E:\Zhenjun\GitHub\LuckyDraw\SMELuckyDraw\obj\Release\SMELuckyDraw.pdb
+E:\Zhenjun\GitHub\LuckyDraw\SMELuckyDraw\obj\Release\SMELuckyDraw.csprojResolveAssemblyReference.cache

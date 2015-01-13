@@ -37,19 +37,18 @@ namespace SMELuckyDraw
             _logic.Init();
         }
 
-        //监视转动是否停止，如果停止，显示价格
+        //timer tick
         void timer_Tick(object sender, EventArgs e)
         {
             if (numberGroupMain.IsStoped())
             {
-                // textBoxFinalPrice.Text = "￥" + finalValue.ToString("F2");//显示最终金额
                 lbWinner.Content = finalValueDesc;
                 timer.Stop();
                 buttonStart.IsEnabled = true;
             }
         }
 
-        //开始按钮点击
+        //start button handler
         private void buttonStart_Click(object sender, RoutedEventArgs e)
         {
             if (!_logic.IsAbleToDraw())
@@ -61,12 +60,11 @@ namespace SMELuckyDraw
             buttonStart.IsEnabled = false;
             buttonStop.IsEnabled = true;
             numberGroupMain.TurnStart();
-            //textBoxFinalPrice.Text = "";
             lbWinner.Content = "Winner";
             timer.Stop();
         }
 
-        //停止按钮点击
+        //stop button handler
         private void buttonStop_Click(object sender, RoutedEventArgs e)
         {
             buttonStop.IsEnabled = false;
@@ -77,13 +75,13 @@ namespace SMELuckyDraw
             {
                 finalValueDesc = cdt.Id + "   " + cdt.Name;
                 finalValue = Convert.ToInt32(cdt.Id.Substring(1)); //remove first char
-                numberGroupMain.TurnStop(finalValue);//使数字组停止
+                numberGroupMain.TurnStop(finalValue);//stop
                 timer.Start();
             }
             else
             {
                 showCannotDrawMsg();
-                numberGroupMain.TurnStop(finalValue);//使数字组停止
+                numberGroupMain.TurnStop(finalValue);//stop
                 timer.Stop();
             }
         }
@@ -91,6 +89,11 @@ namespace SMELuckyDraw
         private void showCannotDrawMsg()
         {
             lbMsg.Content = "No candidate left!";
+        }
+
+        private void btnRest_Click(object sender, RoutedEventArgs e)
+        {
+            _logic.ResetApp();
         }
     }
 }
