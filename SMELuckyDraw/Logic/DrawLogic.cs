@@ -16,6 +16,13 @@ namespace SMELuckyDraw.Logic
         private Dictionary<int, Candidate> _candidateList = new Dictionary<int, Candidate>();
         private Dictionary<int, Candidate> _exceptionList = new Dictionary<int, Candidate>();
         private int _maxCount = 0;
+        private static DrawLogic _instance = new DrawLogic();
+        private DrawLogic() { }
+
+        public static DrawLogic Instance()
+        {
+            return _instance;
+        }
 
         public void Init()
         {
@@ -85,6 +92,13 @@ namespace SMELuckyDraw.Logic
             return _candidateList[id];
         }
 
+        public Candidate FreeDraw(int seed)
+        {
+            Random random = new Random(seed);
+            int idx = random.Next(_maxCount);
+            return _candidateList[idx];
+        }
+
         /// <summary>
         /// Reset app to init state
         /// </summary>
@@ -92,7 +106,6 @@ namespace SMELuckyDraw.Logic
         {
             LogHelper.DEBUG("ResetApp");
             _exceptionList.Clear();
-            _maxCount = 0;
         }        
     }
 }
