@@ -89,7 +89,7 @@ namespace SMELuckyDraw.UC
         }
 
         //使转动停止在某个数字上
-        public void TurnStopAt(int number)
+        public void TurnStopAt(int number, double specifiedDuration = 0)
         {
             if (Speed <= 0)
             {
@@ -106,7 +106,11 @@ namespace SMELuckyDraw.UC
             animation2.From = fromTop;
             animation2.To = toTop;
             double numberCount = (fromTop - toTop) / 120;
-            double duration = BASE_PERIOD * numberCount / 10;
+            double duration = specifiedDuration;
+            if (specifiedDuration  == 0)
+            {
+                duration = BASE_PERIOD * numberCount / 10 + 2;
+            }
             animation2.Duration = new Duration(TimeSpan.FromSeconds(duration));
             animation2.SpeedRatio = 4;
             animation2.DecelerationRatio = 1;
