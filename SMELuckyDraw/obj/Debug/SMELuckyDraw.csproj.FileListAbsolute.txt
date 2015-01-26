@@ -69,3 +69,9 @@ E:\Zhenjun\GitHub\LuckyDraw\SMELuckyDraw\obj\Debug\MainWindow.baml
 E:\Zhenjun\GitHub\LuckyDraw\SMELuckyDraw\obj\Debug\SMELuckyDraw.g.resources
 E:\Zhenjun\GitHub\LuckyDraw\SMELuckyDraw\obj\Debug\SMELuckyDraw.Properties.Resources.resources
 E:\Zhenjun\GitHub\LuckyDraw\SMELuckyDraw\obj\Debug\SMELuckyDraw.csproj.GenerateResource.Cache
+C:\Users\HiClyde\Documents\GitHub\LuckyDraw\SMELuckyDraw\obj\Debug\SunnyWindow.baml
+C:\Users\HiClyde\Documents\GitHub\LuckyDraw\SMELuckyDraw\obj\Debug\SunnyWindow.g.cs
+C:\Users\HiClyde\Documents\GitHub\LuckyDraw\SMELuckyDraw\obj\Debug\UC\NameGroup.baml
+C:\Users\HiClyde\Documents\GitHub\LuckyDraw\SMELuckyDraw\obj\Debug\UC\NameItem.baml
+C:\Users\HiClyde\Documents\GitHub\LuckyDraw\SMELuckyDraw\obj\Debug\UC\NameGroup.g.cs
+C:\Users\HiClyde\Documents\GitHub\LuckyDraw\SMELuckyDraw\obj\Debug\UC\NameItem.g.cs

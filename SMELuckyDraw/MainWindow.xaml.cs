@@ -23,7 +23,7 @@ namespace SMELuckyDraw
     /// </summary>
     public partial class MainWindow : Window
     {
-        private DrawLogic _logic = new DrawLogic();
+        private DrawLogic _logic = DrawLogic.Instance();
         private DispatcherTimer timer = new DispatcherTimer();
         private int finalValue = 0;
         private string finalValueDesc = "";
@@ -94,6 +94,12 @@ namespace SMELuckyDraw
         private void btnRest_Click(object sender, RoutedEventArgs e)
         {
             _logic.ResetApp();
+        }
+
+        private void btnSunny_Click(object sender, RoutedEventArgs e)
+        {
+            SunnyWindow sw = new SunnyWindow();
+            sw.Show();
         }
     }
 }

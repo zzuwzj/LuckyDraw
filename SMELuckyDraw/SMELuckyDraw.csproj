@@ -66,6 +66,15 @@
     </ApplicationDefinition>
     <Compile Include="Logic\DrawLogic.cs" />
     <Compile Include="Model\Candidate.cs" />
+    <Compile Include="SunnyWindow.xaml.cs">
+      <DependentUpon>SunnyWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UC\NameGroup.xaml.cs">
+      <DependentUpon>NameGroup.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UC\NameItem.xaml.cs">
+      <DependentUpon>NameItem.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UC\NumberGroup.xaml.cs">
       <DependentUpon>NumberGroup.xaml</DependentUpon>
     </Compile>
@@ -89,6 +98,18 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="SunnyWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UC\NameGroup.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UC\NameItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="UC\NumberGroup.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -137,6 +158,7 @@
     <Content Include="excel\put name list excel file here and change the excel name in config file which in parent folder.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Resource Include="image\sunny.jpg" />
     <Resource Include="image\SAP-Logo-144x71.jpg" />
     <Resource Include="image\sap.png" />
     <Resource Include="image\bg.jpg" />
