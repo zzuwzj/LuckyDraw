@@ -17,7 +17,7 @@
         <Label Grid.Row="0" Background="#FFF0AB00"></Label>
         <Image HorizontalAlignment="Left" Height="71" Margin="5,5,0,0" Grid.Row="1" VerticalAlignment="Top" Width="144" Source="image/SAP-Logo-144x71.jpg" Stretch="None" >
         </Image>
-        <Label Content="SME Lucky Draw - 阳光普照奖" HorizontalAlignment="Left" Margin="160,9,0,9" Grid.Row="1" VerticalAlignment="Center" FontSize="40" FontFamily="Segoe UI" FontWeight="Bold" Foreground="#f0ab00" Height="62" Width="559"/>
+        <Label Content="SME Lucky Draw - 阳光普照奖" HorizontalAlignment="Left" Margin="160,9,0,9" Grid.Row="1" VerticalAlignment="Center" FontSize="40" FontFamily="Segoe UI" FontWeight="Bold" Foreground="#FF4DAF7B" Height="62" Width="559"/>
         <my:NameGroup Grid.Row="3" Height="560" HorizontalAlignment="Center" x:Name="nameGroupMain" Width="900" HorizontalContentAlignment="Center" VerticalAlignment="Top" Margin="58,0" />
         <Button x:Name="btnStart" Content="Start" HorizontalAlignment="Center" Margin="0" Grid.Row="4" VerticalAlignment="Center" Width="120" Height="50" FontSize="16" FontWeight="Bold" Click="btnStart_Click">
             <Button.Background>

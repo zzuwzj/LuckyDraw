@@ -6,6 +6,6 @@
              mc:Ignorable="d" 
              d:DesignHeight="36" d:DesignWidth="220" Width="220" Height="36">
     <Border BorderThickness="1" x:Name="borderMain">
-        <TextBlock Name="textBlockNameText" Text="Wang, Zhengjung" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#FF827100" />
+        <TextBlock Name="textBlockNameText" Text="Wang, Zhengjung" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#FFFFBF00" />
     </Border>
 </UserControl>
