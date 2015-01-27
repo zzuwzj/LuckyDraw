@@ -33,13 +33,29 @@ namespace SMELuckyDraw.UC
 
         private void Init()
         {
-            Random random = new Random();
-            for (int i = 0; i < 60; i++)
+            //Random random = new Random();
+            //for (int i = 0; i < 60; i++)
+            //{
+            //    NameItem name = new NameItem();
+            //    wrapPanelMain.Children.Add(name);
+            //    listName.Add(name);
+            //}
+        }
+
+        public int AddRandomName()
+        {
+            if (listName.Count < 30)
             {
-                NameItem name = new NameItem();
-                wrapPanelMain.Children.Add(name);
-                listName.Add(name);
+                Candidate cdt = _logic.DoDraw();
+                if (cdt != null)
+                {
+                    NameItem name = new NameItem();
+                    name.NameValue = cdt.Name;
+                    wrapPanelMain.Children.Add(name);
+                    listName.Add(name);
+                }
             }
+            return listName.Count;
         }
 
         public void TurnStart()
