@@ -8,18 +8,28 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="5"/>
-            <RowDefinition Height="80"/>
+            <RowDefinition Height="60"/>
             <RowDefinition Height="5"/>
-            <RowDefinition Height="570*"/>
-            <RowDefinition Height="73*"/>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="500*"/>
+            <RowDefinition Height="50*"/>
             <RowDefinition Height="5"/>
         </Grid.RowDefinitions>
         <Label Grid.Row="0" Background="#FFF0AB00"></Label>
-        <Image HorizontalAlignment="Left" Height="71" Margin="5,5,0,0" Grid.Row="1" VerticalAlignment="Top" Width="144" Source="image/SAP-Logo-144x71.jpg" Stretch="None" >
-        </Image>
-        <Label Content="SME Lucky Draw - 阳光普照奖" HorizontalAlignment="Left" Margin="160,9,0,9" Grid.Row="1" VerticalAlignment="Center" FontSize="40" FontFamily="Segoe UI" FontWeight="Bold" Foreground="#FF4DAF7B" Height="62" Width="559"/>
-        <my:NameGroup Grid.Row="3" Height="560" HorizontalAlignment="Center" x:Name="nameGroupMain" Width="900" HorizontalContentAlignment="Center" VerticalAlignment="Top" Margin="58,0" />
-        <Button x:Name="btnStart" Content="Start" HorizontalAlignment="Center" Margin="0" Grid.Row="4" VerticalAlignment="Center" Width="120" Height="50" FontSize="16" FontWeight="Bold" Click="btnStart_Click">
+        <Label Content="SME Lucky Draw - 阳光普照奖" HorizontalAlignment="Left" Margin="10,9,0,9" Grid.Row="1" VerticalAlignment="Top" FontSize="30" FontFamily="Segoe UI" FontWeight="Bold" Foreground="#FF4DAF7B" Height="40" Width="420" Padding="0"/>
+        <my:NameGroup Grid.Row="4" Height="560" HorizontalAlignment="Left" x:Name="nameGroupMain" Width="900" HorizontalContentAlignment="Center" VerticalAlignment="Top" Margin="58,23.463,0,-12" Grid.RowSpan="3" />
+        <Button x:Name="btnStart" Content="Start" HorizontalAlignment="Center" Margin="0,0,150,0" Grid.Row="5" VerticalAlignment="Center" Width="120" Height="40" FontSize="16" FontWeight="Bold" Click="btnStart_Click">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF3F3F3" Offset="0"/>
+                    <GradientStop Color="#FFEBEBEB" Offset="0.5"/>
+                    <GradientStop Color="#FFDDDDDD" Offset="0.5"/>
+                    <GradientStop Color="#FFF9E1C3" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Label x:Name="lbName" Content="Wish you lucky!" HorizontalAlignment="Center" Margin="0" Grid.Row="3" VerticalAlignment="Center" FontSize="40" Foreground="#FFFF7F00"/>
+        <Button x:Name="btnStart_Copy" Content="Stop" HorizontalAlignment="Center" Margin="150,0,0,0" Grid.Row="5" VerticalAlignment="Center" Width="120" Height="40" FontSize="16" FontWeight="Bold" Click="btnStart_Copy_Click">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
                     <GradientStop Color="#FFF3F3F3" Offset="0"/>

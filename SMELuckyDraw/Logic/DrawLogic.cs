@@ -92,9 +92,9 @@ namespace SMELuckyDraw.Logic
             return _candidateList[id];
         }
 
-        public Candidate FreeDraw(int seed)
+        public Candidate FreeDraw()
         {
-            Random random = new Random(seed);
+            Random random = new Random();
             int idx = random.Next(_maxCount);
             return _candidateList[idx];
         }

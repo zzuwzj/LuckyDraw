@@ -1,4 +1,5 @@
 ﻿using SMELuckyDraw.Logic;
+using SMELuckyDraw.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,15 +29,20 @@ namespace SMELuckyDraw
         public SunnyWindow()
         {
             InitializeComponent();
-            timer.Interval = TimeSpan.FromMilliseconds(200);
+            timer.Interval = TimeSpan.FromMilliseconds(100);
             timer.Tick += new EventHandler(timer_Tick);
         }
 
         //timer tick
         void timer_Tick(object sender, EventArgs e)
         {
+            Candidate cdt = _logic.FreeDraw();
+            if (cdt!=null)
+            {
+                lbName.Content = cdt.Id + "   " + cdt.Name;                
+            }
             _counter++;
-            if (_counter % 5 == 0)
+            if (_counter % 10 == 0)
             {
                 int count = nameGroupMain.AddRandomName();
                 if (count >= 30)
@@ -50,6 +56,11 @@ namespace SMELuckyDraw
         {
             //nameGroupMain.TurnStart();
             timer.Start();
+        }
+
+        private void btnStart_Copy_Click(object sender, RoutedEventArgs e)
+        {
+            timer.Stop();
         }
     }
 }

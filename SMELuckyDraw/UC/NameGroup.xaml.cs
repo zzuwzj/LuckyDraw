@@ -62,8 +62,7 @@ namespace SMELuckyDraw.UC
         {
             foreach (NameItem item in listName)
             {
-                Random rdm = new Random();
-                Candidate cdt = _logic.FreeDraw(rdm.Next(123, 999));
+                Candidate cdt = _logic.FreeDraw();
                 if (cdt != null)
                 {
                     item.NameValue = cdt.Name;
