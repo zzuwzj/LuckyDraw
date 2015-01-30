@@ -21,6 +21,6 @@
                 <GradientStop Color="Gray" Offset="1"/>
             </LinearGradientBrush>
         </Border.BorderBrush>
-        <WrapPanel Name="wrapPanelMain" Margin="4,2"/>
+        <WrapPanel Name="wrapPanelMain" Margin="0,5"/>
     </Border>
 </UserControl>
