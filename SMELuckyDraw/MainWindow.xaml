@@ -84,7 +84,7 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <Button x:Name="btnSunny" Content="阳光普照" HorizontalAlignment="Right" Margin="0,0,100,0" Grid.Row="6" VerticalAlignment="Bottom" Width="90" Height="30" FontSize="16" Click="btnSunny_Click">
+        <Button x:Name="btnSunny" Content="Lucky Prize" HorizontalAlignment="Right" Margin="0,0,100,0" Grid.Row="6" VerticalAlignment="Bottom" Width="110" Height="30" FontSize="16" Click="btnSunny_Click">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
                     <GradientStop Color="#FFF3F3F3" Offset="0"/>
