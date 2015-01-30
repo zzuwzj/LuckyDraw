@@ -50,13 +50,13 @@ namespace SMELuckyDraw.Util
 
             using (OleDbConnection conn = new OleDbConnection(strConn))
             {
+                try
+                {
                 conn.Open();
 
                 DataTable schemaTable = conn.GetOleDbSchemaTable(
                     OleDbSchemaGuid.Tables, new object[] { null, null, null, "TABLE" });
 
-                try
-                {
                     OleDbCommand cmd = new OleDbCommand("SELECT * FROM [" + sheetName + "$]", conn);
                     cmd.CommandType = CommandType.Text;
 
