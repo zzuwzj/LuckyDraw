@@ -84,6 +84,7 @@
     <Compile Include="UC\NumberPanel.xaml.cs">
       <DependentUpon>NumberPanel.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Util\ConfigHelper.cs" />
     <Compile Include="Util\ExcelHelper.cs" />
     <Compile Include="Util\LogHelper.cs" />
     <Page Include="MainWindow.xaml">

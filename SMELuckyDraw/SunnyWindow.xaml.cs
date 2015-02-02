@@ -31,6 +31,8 @@ namespace SMELuckyDraw
             InitializeComponent();
             timer.Interval = TimeSpan.FromMilliseconds(100);
             timer.Tick += new EventHandler(timer_Tick);
+
+            lbCount.Content = _logic.GetExceptionCount();
         }
 
         //timer tick
@@ -39,11 +41,13 @@ namespace SMELuckyDraw
             Candidate cdt = _logic.FreeDraw();
             if (cdt!=null)
             {
-                lbName.Content = cdt.Id + "   " + cdt.Name;                
+                lbName.Content = cdt.Id + "   " + cdt.Name;
             }
+
             _counter++;
             if (_counter % 10 == 0)
             {
+                lbCount.Content = _logic.GetExceptionCount();
                 int count = nameGroupMain.AddRandomName();
                 if (count >= 30)
                 {
@@ -58,7 +62,7 @@ namespace SMELuckyDraw
             timer.Start();
         }
 
-        private void btnStart_Copy_Click(object sender, RoutedEventArgs e)
+        private void btnStop_Click(object sender, RoutedEventArgs e)
         {
             timer.Stop();
         }

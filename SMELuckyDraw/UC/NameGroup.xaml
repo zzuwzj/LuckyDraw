@@ -4,8 +4,8 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" 
-             d:DesignHeight="600" d:DesignWidth="800">
-    <Border BorderThickness="0" Name="borderMain" VerticalAlignment="Center" HorizontalAlignment="Center" CornerRadius="4" Padding="0" Width="800" Height="600">
+             d:DesignHeight="550" d:DesignWidth="950" Background="Transparent" VerticalContentAlignment="Center" Width="950" Height="550">
+    <Border BorderThickness="0" Name="borderMain" VerticalAlignment="Center" HorizontalAlignment="Center" CornerRadius="4" Padding="0">
         <!--<Border.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                 <GradientStop Color="#FF181818" Offset="0"/>
@@ -14,13 +14,13 @@
                 <GradientStop Color="#FF4E4E4E" Offset="0.625"/>
             </LinearGradientBrush>
         </Border.Background>-->
-        <Border.BorderBrush>
+        <!--<Border.BorderBrush>
             <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
                 <GradientStop Color="Red" Offset="0.78"/>
                 <GradientStop Color="LightBlue"/>
                 <GradientStop Color="Gray" Offset="1"/>
             </LinearGradientBrush>
-        </Border.BorderBrush>
-        <WrapPanel Name="wrapPanelMain" Margin="0,5"/>
+        </Border.BorderBrush>-->
+        <WrapPanel Name="wrapPanelMain" Margin="0" Height="550" Width="900"/>
     </Border>
 </UserControl>

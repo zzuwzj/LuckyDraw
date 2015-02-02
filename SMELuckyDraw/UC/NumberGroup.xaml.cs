@@ -71,7 +71,17 @@ namespace SMELuckyDraw.UC
                 int value = (int)(number / Math.Pow(10, 7 - i));
                 var item = listNumber[i];
                 item.TurnStopAt(value);
-            }
+            }            
+        }
+
+        public void TurnStopAt(int idx, int value)
+        {
+            listNumber[idx].TurnStopAt(value);
+        }
+
+        public void HideNumberAt(int idx, bool bHide)
+        {
+            listNumber[idx].HideNumber(bHide);
         }
 
         /// <summary>

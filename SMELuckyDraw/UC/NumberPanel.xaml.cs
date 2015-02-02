@@ -23,6 +23,9 @@ namespace SMELuckyDraw.UC
     {
         //基础周期(秒)
         private readonly int BASE_PERIOD = 10;
+        //Height
+        private readonly int ITEM_HEIGHT = 150;
+        private readonly int HALF_ITEM_HEIGHT = 75;
 
         /// <summary>
         /// 滚动速度（个/秒）
@@ -50,7 +53,7 @@ namespace SMELuckyDraw.UC
 
         //字符列表
         private string[] numberList1 = new string[] { "9", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "1", "2", "3", "4", "5", "6", "7", "8" };
-        private string[] numberList2 = new string[] { "d", "i", "c", "d", "i", "c", "d", "i", "c", "d", "c", "i", "c", "d", "c", "d", "i", "c", "d", "i", "c", "i", "c", "d", "c", "i", "c", "d", "i", "c" };
+        private string[] numberList2 = new string[] { "D", "I", "C", "D", "I", "C", "D", "I", "C", "D", "C", "I", "C", "D", "C", "D", "I", "C", "D", "I", "C", "I", "C", "D", "C", "I", "C", "D", "I", "C" };
 
         public NumberPanel(int listIndex)
         {
@@ -88,8 +91,8 @@ namespace SMELuckyDraw.UC
                 return;
             }
 
-            animation1.From = -60;
-            animation1.To = -120 * 10 - 60;
+            animation1.From = -1 * HALF_ITEM_HEIGHT;
+            animation1.To = -1 * ITEM_HEIGHT * 10 - HALF_ITEM_HEIGHT;
             animation1.Duration = new Duration(TimeSpan.FromSeconds(BASE_PERIOD));
             animation1.SpeedRatio = Speed;
             animation1.RepeatBehavior = RepeatBehavior.Forever;
@@ -109,16 +112,16 @@ namespace SMELuckyDraw.UC
                 return;
             }
             double fromTop = (double)stackPanelMain.GetValue(Canvas.TopProperty);
-            double toTop = -120 * (((number + 22) % 10) + 18) - 60;
+            double toTop = -1 * ITEM_HEIGHT * (((number + 22) % 10) + 18) - HALF_ITEM_HEIGHT;
 
-            if (fromTop - toTop > 120 * 10)
+            if (fromTop - toTop > ITEM_HEIGHT * 10)
             {
-                fromTop -= 120 * 10;
+                fromTop -= ITEM_HEIGHT * 10;
             }
 
             animation2.From = fromTop;
             animation2.To = toTop;
-            double numberCount = (fromTop - toTop) / 120;
+            double numberCount = (fromTop - toTop) / ITEM_HEIGHT;
             double duration = specifiedDuration;
             if (specifiedDuration  == 0)
             {
@@ -144,6 +147,14 @@ namespace SMELuckyDraw.UC
         {
             bool isStopped = storyboard2.GetCurrentState(this) != ClockState.Active;
             return isStopped;
+        }
+
+        public void HideNumber(bool bHide)
+        {
+            foreach (NumberItem item in stackPanelMain.Children)
+            {
+                item.hideNumber(bHide);
+            }
         }
     }
 

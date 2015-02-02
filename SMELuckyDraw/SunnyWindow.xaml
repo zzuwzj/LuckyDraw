@@ -8,7 +8,7 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="5"/>
-            <RowDefinition Height="60"/>
+            <RowDefinition Height="50"/>
             <RowDefinition Height="5"/>
             <RowDefinition Height="70"/>
             <RowDefinition Height="500*"/>
@@ -16,8 +16,8 @@
             <RowDefinition Height="5"/>
         </Grid.RowDefinitions>
         <Label Grid.Row="0" Background="#FFF0AB00"></Label>
-        <Label Content="SME Lucky Draw - Lucky Prize" HorizontalAlignment="Left" Margin="10,9,0,9" Grid.Row="1" VerticalAlignment="Top" FontSize="30" FontFamily="Segoe UI" FontWeight="Bold" Foreground="#FF4DAF7B" Height="40" Width="420" Padding="0"/>
-        <my:NameGroup Grid.Row="4" Height="560" HorizontalAlignment="Left" x:Name="nameGroupMain" Width="900" HorizontalContentAlignment="Center" VerticalAlignment="Top" Margin="58,23.463,0,-12" Grid.RowSpan="3" />
+        <Label Content="SME Lucky Draw - Lucky Prize" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="1" VerticalAlignment="Center" FontSize="30" FontFamily="Segoe UI" FontWeight="Bold" Foreground="#FF4DAF7B" Height="40" Width="420" Padding="0"/>
+        <my:NameGroup Grid.Row="4" Height="550" x:Name="nameGroupMain" Width="950" HorizontalContentAlignment="Center" VerticalAlignment="Top" Margin="10,0" Grid.RowSpan="2" Background="Transparent" />
         <Button x:Name="btnStart" Content="Start" HorizontalAlignment="Center" Margin="0,0,150,0" Grid.Row="5" VerticalAlignment="Center" Width="120" Height="40" FontSize="16" FontWeight="Bold" Click="btnStart_Click">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
@@ -29,7 +29,7 @@
             </Button.Background>
         </Button>
         <Label x:Name="lbName" Content="Wish you lucky!" HorizontalAlignment="Center" Margin="0" Grid.Row="3" VerticalAlignment="Center" FontSize="40" Foreground="#FFFF7F00"/>
-        <Button x:Name="btnStart_Copy" Content="Stop" HorizontalAlignment="Center" Margin="150,0,0,0" Grid.Row="5" VerticalAlignment="Center" Width="120" Height="40" FontSize="16" FontWeight="Bold" Click="btnStart_Copy_Click">
+        <Button x:Name="btnStop" Content="Stop" HorizontalAlignment="Center" Margin="150,0,0,0" Grid.Row="5" VerticalAlignment="Center" Width="120" Height="40" FontSize="16" FontWeight="Bold" Click="btnStop_Click">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
                     <GradientStop Color="#FFF3F3F3" Offset="0"/>
@@ -39,5 +39,6 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
+        <Label x:Name="lbCount" Content="0" HorizontalAlignment="Right" Margin="0,0,10,0" Grid.Row="5" VerticalAlignment="Center"  FontSize="26" Foreground="#FFFF7F00"/>
     </Grid>
 </Window>

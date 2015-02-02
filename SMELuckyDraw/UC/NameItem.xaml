@@ -4,8 +4,9 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" 
-             d:DesignHeight="52" d:DesignWidth="260" Width="260" Height="52">
+             d:DesignHeight="55" d:DesignWidth="298" Width="298" Height="55" Background="Transparent">
     <Border BorderThickness="1" x:Name="borderMain">
-        <TextBlock Name="textBlockNameText" Text="Wang, Zhengjung" FontSize="32" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#FFFFBF00" />
+        <Label x:Name="lbNameText" Content="Test, Looong Name" Height="55" Width="296" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="32" Foreground="#FFFFBF00" Background="Transparent" FontStretch="Condensed" />
+        <!--<TextBlock Name="textBlockNameText" Text="Test, Looong Name" FontSize="136" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#FFFFBF00" Background="Lime" FontFamily="Microsoft YaHei" TextAlignment="Center" />-->
     </Border>
 </UserControl>

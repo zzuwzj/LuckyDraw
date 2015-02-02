@@ -53,6 +53,7 @@ namespace SMELuckyDraw.UC
                     name.NameValue = cdt.Name;
                     wrapPanelMain.Children.Add(name);
                     listName.Add(name);
+                    name.TurnStart();
                 }
             }
             return listName.Count;

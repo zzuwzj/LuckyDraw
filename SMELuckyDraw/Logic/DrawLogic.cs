@@ -17,6 +17,7 @@ namespace SMELuckyDraw.Logic
         private Dictionary<int, Candidate> _exceptionList = new Dictionary<int, Candidate>();
         private int _maxCount = 0;
         private static DrawLogic _instance = new DrawLogic();
+        private bool isInitialized = false;
         private DrawLogic() { }
 
         public static DrawLogic Instance()
@@ -26,16 +27,22 @@ namespace SMELuckyDraw.Logic
 
         public void Init()
         {
+            if (isInitialized)
+            {
+                return;
+            }
+
             try
             {
                 prepareCandidateList();
+                prepareExceptionList();
+                isInitialized = true;
             }
             catch (Exception e)
             {
                 LogHelper.DEBUG("Init logic failed.", e);
                 throw;
-            }
-            
+            }            
         }
 
         private void prepareCandidateList()
@@ -43,7 +50,7 @@ namespace SMELuckyDraw.Logic
             LogHelper.DEBUG("prepareCandidateList");
             //STEP 1, read from excel to DataTable
             string currDir = System.AppDomain.CurrentDomain.BaseDirectory;
-            string excelName = ConfigurationManager.AppSettings["excelName"];
+            string excelName = ConfigHelper.Instance().GetAppSettings("excelName");
             string excelPath = Path.Combine(currDir, "excel");
             excelPath = Path.Combine(excelPath, excelName);
             DataTable dtCandidates = ExcelHelper.ExcelToDatatable(excelPath, true, false);
@@ -60,6 +67,25 @@ namespace SMELuckyDraw.Logic
                     _candidateList.Add(idx++, cdt);
                 }
                 _maxCount = idx;
+            }
+        }
+
+        private void prepareExceptionList()
+        {
+            string strExcp = ConfigHelper.Instance().GetAppSettings("exceptionList");
+            strExcp.TrimEnd();
+            strExcp.TrimEnd(',');
+            string[] listExcp = strExcp.Split(',');
+
+            foreach (string str in listExcp)
+            {
+                if (string.IsNullOrWhiteSpace(str))
+                {
+                    continue;
+                }
+
+                int id = Convert.ToInt32(str);
+                _exceptionList.Add(id, _candidateList[id]);
             }
         }
 
@@ -97,6 +123,8 @@ namespace SMELuckyDraw.Logic
             }
 
             _exceptionList.Add(id, _candidateList[id]);
+            ConfigHelper.Instance().AppendAppSettings("exceptionList", id + ", ");
+            ConfigHelper.Instance().AppendAppSettings("winnerList", _candidateList[id].Name + "  /  ");
 
             return _candidateList[id];
         }
@@ -108,6 +136,11 @@ namespace SMELuckyDraw.Logic
             return _candidateList[idx];
         }
 
+        public int GetExceptionCount()
+        {
+            return _exceptionList.Count;
+        }
+
         /// <summary>
         /// Reset app to init state
         /// </summary>
@@ -115,6 +148,8 @@ namespace SMELuckyDraw.Logic
         {
             LogHelper.DEBUG("ResetApp");
             _exceptionList.Clear();
+            ConfigHelper.Instance().UpdateAppSettings("exceptionList", "");
+            ConfigHelper.Instance().UpdateAppSettings("winnerList", "");
         }        
     }
 }

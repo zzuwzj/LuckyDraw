@@ -4,8 +4,8 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" 
-             d:DesignHeight="128" d:DesignWidth="128" Width="80" Height="120">
+             d:DesignHeight="128" d:DesignWidth="128" Width="90" Height="150">
     <Border BorderThickness="1" x:Name="borderMain">
-        <TextBlock Name="textBlockNumberText" Text="0" FontSize="96" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        <TextBlock Name="textBlockNumberText" Text="0" FontSize="108" HorizontalAlignment="Center" VerticalAlignment="Center" />
     </Border>
 </UserControl>

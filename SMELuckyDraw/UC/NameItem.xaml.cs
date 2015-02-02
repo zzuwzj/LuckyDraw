@@ -33,7 +33,7 @@ namespace SMELuckyDraw.UC
             }
             set
             {
-                textBlockNameText.Text = value.ToString();
+                lbNameText.Content = value.ToString();
                 _NameValue = value;
             }
         }
@@ -49,22 +49,23 @@ namespace SMELuckyDraw.UC
 
         public void TurnStart()
         {
-            anim1.From = 5;
-            anim1.To = 20;
-            anim1.Duration = new Duration(TimeSpan.FromSeconds(1.5));
+            anim1.From = 1;
+            anim1.To = 50;
+            anim1.Duration = new Duration(TimeSpan.FromMilliseconds(300));
             //anim1.SpeedRatio = Speed;
-            anim1.RepeatBehavior = RepeatBehavior.Forever;
-            Storyboard.SetTargetName(anim1, textBlockNameText.Name);
-            Storyboard.SetTargetProperty(anim1, new PropertyPath(TextBlock.FontSizeProperty));
+            //anim1.RepeatBehavior = RepeatBehavior.Forever;
+            Storyboard.SetTargetName(anim1, lbNameText.Name);
+            Storyboard.SetTargetProperty(anim1, new PropertyPath(Label.FontSizeProperty));
             storyBoard.Children.Add(anim1);
 
-            anim2.From = 0.5;
-            anim2.To = 1;
-            anim2.Duration = new Duration(TimeSpan.FromSeconds(1.5));
+            anim2.From = 50;
+            anim2.To = 30;
+            anim2.Duration = new Duration(TimeSpan.FromMilliseconds(200));
+            anim2.BeginTime = TimeSpan.FromMilliseconds(300);
             //anim1.SpeedRatio = Speed;
-            anim2.RepeatBehavior = RepeatBehavior.Forever;
-            Storyboard.SetTargetName(anim2, textBlockNameText.Name);
-            Storyboard.SetTargetProperty(anim2, new PropertyPath(TextBlock.OpacityProperty));
+            //anim2.RepeatBehavior = RepeatBehavior.Forever;
+            Storyboard.SetTargetName(anim2, lbNameText.Name);
+            Storyboard.SetTargetProperty(anim2, new PropertyPath(Label.FontSizeProperty));
             storyBoard.Children.Add(anim2);
 
             storyBoard.Begin(this, true);
