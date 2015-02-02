@@ -26,7 +26,16 @@ namespace SMELuckyDraw.Logic
 
         public void Init()
         {
-            prepareCandidateList();
+            try
+            {
+                prepareCandidateList();
+            }
+            catch (Exception e)
+            {
+                LogHelper.DEBUG("Init logic failed.", e);
+                throw;
+            }
+            
         }
 
         private void prepareCandidateList()

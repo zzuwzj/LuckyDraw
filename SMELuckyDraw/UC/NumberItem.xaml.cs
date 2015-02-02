@@ -41,5 +41,17 @@ namespace SMELuckyDraw.UC
         {
             InitializeComponent();
         }
+
+        public void hideNumber(bool bHide)
+        {
+            if (bHide)
+            {
+                textBlockNumberText.Visibility = System.Windows.Visibility.Hidden;
+            }
+            else
+            {
+                textBlockNumberText.Visibility = System.Windows.Visibility.Visible;
+            }
+        }
     }
 }

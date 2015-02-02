@@ -15,6 +15,7 @@ using System.Windows.Shapes;
 using System.Windows.Threading;
 using SMELuckyDraw.Logic;
 using SMELuckyDraw.Model;
+using SMELuckyDraw.Util;
 
 namespace SMELuckyDraw
 {
@@ -27,14 +28,26 @@ namespace SMELuckyDraw
         private DispatcherTimer timer = new DispatcherTimer();
         private int finalValue = 0;
         private string finalValueDesc = "";
+        private Dictionary<string, string> dictIdChar = new Dictionary<string, string>();
 
         public MainWindow()
         {
+            LogHelper.DEBUG("Init main window.");
             InitializeComponent();
+            Init();
+        }
+
+        private void Init()
+        {
             timer.Interval = TimeSpan.FromSeconds(1);
             timer.Tick += new EventHandler(timer_Tick);
 
             _logic.Init();
+
+            // Init Id char map for i, c & d user
+            dictIdChar.Add("i", "0");
+            dictIdChar.Add("c", "1");
+            dictIdChar.Add("d", "2");
         }
 
         //timer tick
@@ -74,7 +87,19 @@ namespace SMELuckyDraw
             if (cdt != null)
             {
                 finalValueDesc = cdt.Id + "   " + cdt.Name;
-                finalValue = Convert.ToInt32(cdt.Id.Substring(1)); //remove first char
+                string winnerId = cdt.Id;
+
+                //i-user only has 7 chars
+                if (winnerId.Length == 7)
+                {
+                    winnerId += "0";
+                }
+
+                //change user char to number
+                string idChar = winnerId.Substring(0, 1).ToLower();
+                winnerId = dictIdChar[idChar] + winnerId.Substring(1);
+
+                finalValue = Convert.ToInt32(winnerId); //remove first char
                 numberGroupMain.TurnStop(finalValue);//stop
                 timer.Start();
             }

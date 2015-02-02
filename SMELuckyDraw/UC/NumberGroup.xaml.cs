@@ -39,9 +39,17 @@ namespace SMELuckyDraw.UC
             double stepSpeed = 0.1;//累加速度
             double randomSpeed = 3;//随机速度范围
             Random random = new Random();
-            for (int i = 0; i < 6; i++)
+
+            // first number (char)
+            NumberPanel number1 = new NumberPanel(2);
+            number1.Speed = baseSpeed + (stepSpeed * 0) + random.NextDouble() * randomSpeed;
+            stackPanelMain.Children.Add(number1);
+            listNumber.Add(number1);
+
+            // other numbers
+            for (int i = 1; i < 8; i++)
             {
-                NumberPanel number = new NumberPanel();
+                NumberPanel number = new NumberPanel(1);
                 number.Speed = baseSpeed + (stepSpeed * i) + random.NextDouble() * randomSpeed;
                 stackPanelMain.Children.Add(number);
                 listNumber.Add(number);
@@ -58,9 +66,9 @@ namespace SMELuckyDraw.UC
 
         public void TurnStop(int number)
         {
-            for (int i = 0; i < 6; i++)
+            for (int i = 0; i < 8; i++)
             {
-                int value = (int)(number / Math.Pow(10, 5 - i));
+                int value = (int)(number / Math.Pow(10, 7 - i));
                 var item = listNumber[i];
                 item.TurnStopAt(value);
             }

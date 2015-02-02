@@ -49,21 +49,34 @@ namespace SMELuckyDraw.UC
         DoubleAnimation animation2 = new DoubleAnimation();
 
         //字符列表
-        private string[] numberList = new string[] { "9", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "1", "2", "3", "4", "5", "6", "7", "8" };
+        private string[] numberList1 = new string[] { "9", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "1", "2", "3", "4", "5", "6", "7", "8" };
+        private string[] numberList2 = new string[] { "d", "i", "c", "d", "i", "c", "d", "i", "c", "d", "c", "i", "c", "d", "c", "d", "i", "c", "d", "i", "c", "i", "c", "d", "c", "i", "c", "d", "i", "c" };
 
-        public NumberPanel()
+        public NumberPanel(int listIndex)
         {
             InitializeComponent();
-            Init();
+            Init(listIndex);
         }
 
-        private void Init()
+        private void Init(int listIndex)
         {
-            foreach (string i in numberList)
+            if (listIndex == 2)
             {
-                NumberItem item = new NumberItem();
-                item.NumberValue = i;
-                stackPanelMain.Children.Add(item);
+                foreach (string i in numberList2)
+                {
+                    NumberItem item = new NumberItem();
+                    item.NumberValue = i;
+                    stackPanelMain.Children.Add(item);
+                }
+            }
+            else
+            {
+                foreach (string i in numberList1)
+                {
+                    NumberItem item = new NumberItem();
+                    item.NumberValue = i;
+                    stackPanelMain.Children.Add(item);
+                }
             }
         }
 

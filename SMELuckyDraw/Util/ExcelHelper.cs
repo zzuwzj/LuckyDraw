@@ -25,6 +25,7 @@ namespace SMELuckyDraw.Util
         /// <returns></returns>
         public static DataTable ExcelToDatatable(string excelPath, bool hasHeader, bool isMixedData, string sheetName = "sheet1", int startRow = -1, int endRow = -1, int startColumn = -1, int endColumn = -1)
         {
+            LogHelper.DEBUG("Begin ExcelToDatatable");
             // check fesibillity
             if (!File.Exists(excelPath) ||
                 string.IsNullOrWhiteSpace(sheetName) ||
@@ -52,10 +53,10 @@ namespace SMELuckyDraw.Util
             {
                 try
                 {
-                conn.Open();
+                    conn.Open();
 
-                DataTable schemaTable = conn.GetOleDbSchemaTable(
-                    OleDbSchemaGuid.Tables, new object[] { null, null, null, "TABLE" });
+                    DataTable schemaTable = conn.GetOleDbSchemaTable(
+                        OleDbSchemaGuid.Tables, new object[] { null, null, null, "TABLE" });
 
                     OleDbCommand cmd = new OleDbCommand("SELECT * FROM [" + sheetName + "$]", conn);
                     cmd.CommandType = CommandType.Text;

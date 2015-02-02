@@ -68,8 +68,8 @@
                 </LinearGradientBrush>
             </TextBox.BorderBrush>
         </TextBox>-->
-        <Label Name="lbMsg" Grid.Row="6" Content="Please start!" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="503,16,503,15" Panel.ZIndex="10" Foreground="Blue"></Label>
-        <my:NumberGroup Grid.Row="4" Height="311" HorizontalAlignment="Center" x:Name="numberGroupMain" Width="588" HorizontalContentAlignment="Center" VerticalAlignment="Top" Margin="214,0" />
+        <Label Name="lbMsg" Grid.Row="6" Content="Please start!" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="503,16,503,15" Panel.ZIndex="101" Foreground="Blue"></Label>
+        <my:NumberGroup Grid.Row="4" Height="311" HorizontalAlignment="Center" x:Name="numberGroupMain" Width="800" HorizontalContentAlignment="Center" VerticalAlignment="Top" Margin="0" />
         <Label Name="lbWinner" Content="Winner" HorizontalAlignment="Center" Margin="0" Grid.Row="3" VerticalAlignment="Center" FontSize="48" FontWeight="Bold" Foreground="#FF6BBA70" />
         <Image HorizontalAlignment="Left" Height="71" Margin="5,5,0,0" Grid.Row="1" VerticalAlignment="Top" Width="144" Source="image/SAP-Logo-144x71.jpg" Stretch="None" >
         </Image>

@@ -4,7 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="300" Width="380" Height="280">
+             d:DesignHeight="300" d:DesignWidth="700" Width="800" Height="280">
     <Border BorderThickness="10" Name="borderMain" VerticalAlignment="Center" HorizontalAlignment="Center" CornerRadius="4" Padding="0,0,1,0">
         <Border.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
