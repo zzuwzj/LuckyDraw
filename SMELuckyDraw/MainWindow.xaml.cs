@@ -205,8 +205,8 @@ namespace SMELuckyDraw
             Candidate cdt = _logic.DoDraw();
             if (cdt != null)
             {
-                finalValueDesc = cdt.Id + "   " + cdt.Name;
-                string winnerId = cdt.Id;
+                finalValueDesc = cdt.Id.Trim() + "   " + cdt.Name.Trim();
+                string winnerId = cdt.Id.Trim();
 
                 //i-user only has 7 chars
                 isIUser = false;
