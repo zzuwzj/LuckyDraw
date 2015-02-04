@@ -50,7 +50,7 @@ namespace SMELuckyDraw.UC
         public void TurnStart()
         {
             anim1.From = 1;
-            anim1.To = 50;
+            anim1.To = 40;
             anim1.Duration = new Duration(TimeSpan.FromMilliseconds(300));
             //anim1.SpeedRatio = Speed;
             //anim1.RepeatBehavior = RepeatBehavior.Forever;
@@ -58,7 +58,7 @@ namespace SMELuckyDraw.UC
             Storyboard.SetTargetProperty(anim1, new PropertyPath(Label.FontSizeProperty));
             storyBoard.Children.Add(anim1);
 
-            anim2.From = 50;
+            anim2.From = 40;
             anim2.To = 30;
             anim2.Duration = new Duration(TimeSpan.FromMilliseconds(200));
             anim2.BeginTime = TimeSpan.FromMilliseconds(300);

@@ -159,7 +159,9 @@
     <Content Include="excel\put name list excel file here and change the excel name in config file which in parent folder.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Resource Include="image\sunny.jpg" />
+    <Resource Include="image\star5.jpg" />
+    <Resource Include="image\star1.jpg" />
+    <Resource Include="image\star4.jpg" />
     <Resource Include="image\SAP-Logo-144x71.jpg" />
     <Resource Include="image\sap.png" />
     <Resource Include="image\bg.jpg" />

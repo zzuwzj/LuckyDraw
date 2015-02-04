@@ -25,6 +25,7 @@ namespace SMELuckyDraw
         private DrawLogic _logic = DrawLogic.Instance();
         private DispatcherTimer timer = new DispatcherTimer();
         private int _counter = 0;
+        bool isRunning = false;
 
         public SunnyWindow()
         {
@@ -39,7 +40,7 @@ namespace SMELuckyDraw
         void timer_Tick(object sender, EventArgs e)
         {
             Candidate cdt = _logic.FreeDraw();
-            if (cdt!=null)
+            if (cdt != null)
             {
                 lbName.Content = cdt.Id + "   " + cdt.Name;
             }
@@ -47,12 +48,13 @@ namespace SMELuckyDraw
             _counter++;
             if (_counter % 10 == 0)
             {
-                lbCount.Content = _logic.GetExceptionCount();
                 int count = nameGroupMain.AddRandomName();
                 if (count >= 30)
                 {
                     timer.Stop();
+                    isRunning = false;
                 }
+                lbCount.Content = _logic.GetExceptionCount();
             }
         }
 
@@ -60,11 +62,26 @@ namespace SMELuckyDraw
         {
             //nameGroupMain.TurnStart();
             timer.Start();
+            isRunning = true;
         }
 
         private void btnStop_Click(object sender, RoutedEventArgs e)
         {
             timer.Stop();
+            isRunning = false;
+        }
+
+        private void Window_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (isRunning)
+            {
+                timer.Stop();
+            }
+            else
+            {
+                timer.Start();
+            }
+            isRunning = !isRunning;
         }
     }
 }
