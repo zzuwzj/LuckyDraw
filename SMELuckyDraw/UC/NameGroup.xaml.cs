@@ -84,5 +84,11 @@ namespace SMELuckyDraw.UC
                 var item = listName[i];
             }
         }
+
+        public void Clear()
+        {
+            wrapPanelMain.Children.Clear();
+            listName.Clear();
+        }
     }
 }

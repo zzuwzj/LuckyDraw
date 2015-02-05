@@ -25,7 +25,8 @@ namespace SMELuckyDraw
         private DrawLogic _logic = DrawLogic.Instance();
         private DispatcherTimer timer = new DispatcherTimer();
         private int _counter = 0;
-        bool isRunning = false;
+        private bool isRunning = false;
+        private readonly string DEFAULT_LABEL = "Wish you lucky!";
 
         public SunnyWindow()
         {
@@ -53,6 +54,7 @@ namespace SMELuckyDraw
                 {
                     timer.Stop();
                     isRunning = false;
+                    lbName.Content = DEFAULT_LABEL;
                 }
                 lbCount.Content = _logic.GetExceptionCount();
             }
@@ -73,15 +75,30 @@ namespace SMELuckyDraw
 
         private void Window_KeyUp(object sender, KeyEventArgs e)
         {
-            if (isRunning)
+            if (e.Key == Key.Enter)
             {
-                timer.Stop();
+                if (isRunning)
+                {
+                    timer.Stop();
+                    lbName.Content = DEFAULT_LABEL;
+                }
+                else
+                {
+                    timer.Start();
+                }
+                isRunning = !isRunning;
             }
-            else
-            {
-                timer.Start();
-            }
-            isRunning = !isRunning;
+        }
+
+        private void btnClear_Click(object sender, RoutedEventArgs e)
+        {
+            nameGroupMain.Clear();
+            lbName.Content = DEFAULT_LABEL;
+        }
+
+        private void btnClear_GotFocus(object sender, RoutedEventArgs e)
+        {
+            btnBlank.Focus();
         }
     }
 }

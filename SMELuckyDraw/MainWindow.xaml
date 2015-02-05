@@ -74,7 +74,7 @@
         <Image HorizontalAlignment="Left" Height="71" Margin="5,5,0,0" Grid.Row="1" VerticalAlignment="Top" Width="144" Source="image/SAP-Logo-144x71.jpg" Stretch="None" >
         </Image>
         <Label Content="SME Lucky Draw - 2015" HorizontalAlignment="Left" Margin="160,0,5,9" Grid.Row="1" VerticalAlignment="Center" FontSize="40" FontFamily="Segoe UI" FontWeight="Bold" Foreground="#f0ab00"/>
-        <Button Name="btnRest" Content="Reset" HorizontalAlignment="Right" Margin="0,0,20,0" Grid.Row="6" VerticalAlignment="Bottom" Width="60" Height="30" FontSize="16" IsTabStop="False" Click="btnRest_Click" GotFocus="btnRest_GotFocus">
+        <Button Name="btnRest" Content="Reset" HorizontalAlignment="Right" Margin="0,0,20,0" Grid.Row="6" VerticalAlignment="Bottom" Width="60" Height="30" FontSize="16" IsTabStop="False" Click="btnRest_Click" GotFocus="btnRest_GotFocus" Padding="0">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
                     <GradientStop Color="#FFF3F3F3" Offset="0"/>
@@ -84,7 +84,7 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <Button x:Name="btnSunny" Content="Lucky Prize" HorizontalAlignment="Right" Margin="0,0,100,0" Grid.Row="6" VerticalAlignment="Bottom" Width="110" Height="30" FontSize="16" IsTabStop="False" Click="btnSunny_Click" GotFocus="btnSunny_GotFocus">
+        <Button x:Name="btnSunny" Content="Lucky Prize" HorizontalAlignment="Right" Margin="0,0,100,0" Grid.Row="6" VerticalAlignment="Bottom" Width="110" Height="30" FontSize="16" IsTabStop="False" Click="btnSunny_Click" GotFocus="btnSunny_GotFocus" Padding="0">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
                     <GradientStop Color="#FFF3F3F3" Offset="0"/>
