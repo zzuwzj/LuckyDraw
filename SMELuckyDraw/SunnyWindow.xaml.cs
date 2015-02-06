@@ -27,6 +27,7 @@ namespace SMELuckyDraw
         private int _counter = 0;
         private bool isRunning = false;
         private readonly string DEFAULT_LABEL = "Wish you lucky!";
+        private readonly string DEFAULT_LABEL_CONGRAT = "Contratulations!";
 
         public SunnyWindow()
         {
@@ -54,7 +55,7 @@ namespace SMELuckyDraw
                 {
                     timer.Stop();
                     isRunning = false;
-                    lbName.Content = DEFAULT_LABEL;
+                    lbName.Content = DEFAULT_LABEL_CONGRAT;
                 }
                 lbCount.Content = _logic.GetExceptionCount();
             }
@@ -80,7 +81,7 @@ namespace SMELuckyDraw
                 if (isRunning)
                 {
                     timer.Stop();
-                    lbName.Content = DEFAULT_LABEL;
+                    lbName.Content = DEFAULT_LABEL_CONGRAT;
                 }
                 else
                 {

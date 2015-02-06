@@ -1,0 +1,19 @@
+﻿<Window x:Class="SMELuckyDraw.About"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="About" Height="600" Width="700" WindowStartupLocation="CenterScreen" Icon="goat.ico" ResizeMode="NoResize" Background="#FFEEEEEE">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="4"/>
+            <RowDefinition Height="55"/>
+            <RowDefinition Height="1"/>
+            <RowDefinition Height="500"/>
+            <RowDefinition Height="5"/>
+        </Grid.RowDefinitions>
+        <Label Grid.Row="0" Background="#FFF0AB00"></Label>
+        <Label Grid.Row="2" Background="#FFC6D7ED"></Label>
+        <Image Height="500" Margin="0" Width="500" Grid.Row="2" Source="image/LD.png" Grid.RowSpan="2"/>
+        <Label Content="http://zzuwzj.github.io/LuckyDraw" Margin="0" Grid.Row="1" VerticalAlignment="Center" FontSize="36" Padding="0" Foreground="#FF85C9BD" HorizontalContentAlignment="Center"/>
+
+    </Grid>
+</Window>

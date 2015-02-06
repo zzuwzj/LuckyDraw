@@ -1,16 +1,16 @@
 ﻿<Window x:Class="SMELuckyDraw.SunnyWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:my="clr-namespace:SMELuckyDraw.UC" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Lucky Prize" Height="768" Width="1024" WindowStartupLocation="CenterScreen" Topmost="True" Icon="goat.ico" KeyUp="Window_KeyUp">
+        Title="Lucky Prize" Height="720" Width="1024" WindowStartupLocation="CenterScreen" Topmost="True" Icon="goat.ico" KeyUp="Window_KeyUp">
     <Window.Background>
         <ImageBrush ImageSource="image/star5.jpg"/>
     </Window.Background>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="5"/>
-            <RowDefinition Height="50"/>
+            <RowDefinition Height="40"/>
             <RowDefinition Height="5"/>
-            <RowDefinition Height="70"/>
+            <RowDefinition Height="60"/>
             <RowDefinition Height="500*"/>
             <RowDefinition Height="50*"/>
             <RowDefinition Height="5"/>
@@ -28,7 +28,7 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <Label x:Name="lbName" Content="Wish you lucky!" HorizontalAlignment="Center" Margin="0" Grid.Row="3" VerticalAlignment="Center" FontSize="40" Foreground="#FFFF7F00"/>
+        <Label x:Name="lbName" Content="Wish you lucky!" HorizontalAlignment="Center" Margin="0" Grid.Row="3" VerticalAlignment="Center" FontSize="40" Foreground="#FFFF7F00" Padding="0"/>
         <Button x:Name="btnStop" HorizontalAlignment="Center" Margin="150,0,0,0" Grid.Row="5" VerticalAlignment="Center" Width="120" Height="40" FontSize="16" FontWeight="Bold" Click="btnStop_Click" Visibility="Hidden">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">

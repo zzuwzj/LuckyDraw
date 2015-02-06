@@ -62,6 +62,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="About.xaml.cs">
+      <DependentUpon>About.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Logic\DrawLogic.cs" />
     <Compile Include="Model\Candidate.cs" />
     <Compile Include="SunnyWindow.xaml.cs">
@@ -85,6 +88,10 @@
     <Compile Include="Util\ConfigHelper.cs" />
     <Compile Include="Util\ExcelHelper.cs" />
     <Compile Include="Util\LogHelper.cs" />
+    <Page Include="About.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -157,6 +164,7 @@
     <Content Include="excel\put name list excel file here and change the excel name in config file which in parent folder.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Resource Include="image\LD.png" />
     <Resource Include="image\star5.jpg" />
     <Resource Include="image\star1.jpg" />
     <Resource Include="image\star4.jpg" />

@@ -287,5 +287,16 @@ namespace SMELuckyDraw
         {
             btnBlank.Focus();
         }
+
+        private void Button_GotFocus(object sender, RoutedEventArgs e)
+        {
+            btnBlank.Focus();
+        }
+
+        private void btnAbout_Click(object sender, RoutedEventArgs e)
+        {
+            About abt = new About();
+            abt.Show();
+        }
     }
 }
