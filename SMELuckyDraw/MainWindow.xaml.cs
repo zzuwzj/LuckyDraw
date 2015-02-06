@@ -125,6 +125,7 @@ namespace SMELuckyDraw
 
                 drawStatus = DrawStatus.STOPPED;
                 isAllTurnStopped = false;
+                LogHelper.INFO("End draw");
             }
         }
 
@@ -159,6 +160,7 @@ namespace SMELuckyDraw
             else if (drawStatus == DrawStatus.STOPPED) // start
             {
                 StartDraw();
+                LogHelper.INFO("Start draw");
             }
             else // stop
             {

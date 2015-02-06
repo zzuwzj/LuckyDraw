@@ -42,7 +42,7 @@ namespace SMELuckyDraw.Logic
             {
                 LogHelper.DEBUG("Init logic failed.", e);
                 throw;
-            }            
+            }
         }
 
         private void prepareCandidateList()
@@ -119,12 +119,15 @@ namespace SMELuckyDraw.Logic
             //id = -1, no candidate left
             if (id == -1)
             {
-                return null;   
+                return null;
             }
 
+            string winner = _candidateList[id].Id + "  " + _candidateList[id].Name;
             _exceptionList.Add(id, _candidateList[id]);
             ConfigHelper.Instance().AppendAppSettings("exceptionList", id + ", ");
-            ConfigHelper.Instance().AppendAppSettings("winnerList", _candidateList[id].Name + "  /  ");
+            ConfigHelper.Instance().AppendAppSettings("winnerList", winner + "  /  ");
+
+            LogHelper.INFO(winner);
 
             return _candidateList[id];
         }
@@ -150,6 +153,6 @@ namespace SMELuckyDraw.Logic
             _exceptionList.Clear();
             ConfigHelper.Instance().UpdateAppSettings("exceptionList", "");
             ConfigHelper.Instance().UpdateAppSettings("winnerList", "");
-        }        
+        }
     }
 }

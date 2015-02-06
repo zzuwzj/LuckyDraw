@@ -1,5 +1,6 @@
 ﻿using SMELuckyDraw.Logic;
 using SMELuckyDraw.Model;
+using SMELuckyDraw.Util;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -66,12 +67,20 @@ namespace SMELuckyDraw
             //nameGroupMain.TurnStart();
             timer.Start();
             isRunning = true;
+            LogHelper.INFO("");
+            LogHelper.INFO("=============================");
+            LogHelper.INFO("Total Winners: " + _logic.GetExceptionCount());
+            LogHelper.INFO("Start lucky draw");
         }
 
         private void btnStop_Click(object sender, RoutedEventArgs e)
         {
             timer.Stop();
+            lbName.Content = DEFAULT_LABEL_CONGRAT;
             isRunning = false;
+            LogHelper.INFO("End lucky draw");
+            LogHelper.INFO("Total Winners: " + _logic.GetExceptionCount());
+            LogHelper.INFO("=============================\r\n");
         }
 
         private void Window_KeyUp(object sender, KeyEventArgs e)
@@ -82,10 +91,16 @@ namespace SMELuckyDraw
                 {
                     timer.Stop();
                     lbName.Content = DEFAULT_LABEL_CONGRAT;
+                    LogHelper.INFO("End lucky draw");
+                    LogHelper.INFO("Total Winners: " + _logic.GetExceptionCount());
+                    LogHelper.INFO("=============================\r\n");
                 }
                 else
                 {
                     timer.Start();
+                    LogHelper.INFO("=============================");
+                    LogHelper.INFO("Total Winners: " + _logic.GetExceptionCount());
+                    LogHelper.INFO("Start lucky draw");
                 }
                 isRunning = !isRunning;
             }
