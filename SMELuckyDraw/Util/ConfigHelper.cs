@@ -22,10 +22,18 @@ namespace SMELuckyDraw.Util
 
         private void refreshAppSettings()
         {
-            //一定要记得保存，写不带参数的config.Save()也可以
-            config.Save(ConfigurationSaveMode.Modified);
-            //刷新，否则程序读取的还是之前的值（可能已装入内存）
-            System.Configuration.ConfigurationManager.RefreshSection("appSettings");
+            try
+            {
+                //一定要记得保存，写不带参数的config.Save()也可以
+                config.Save(ConfigurationSaveMode.Modified);
+                //刷新，否则程序读取的还是之前的值（可能已装入内存）
+                System.Configuration.ConfigurationManager.RefreshSection("appSettings");
+            }
+            catch (Exception e)
+            {
+                LogHelper.DEBUG("refreshAppSettings failed.", e);
+                throw e;
+            }
         }
 
         public string GetAppSettings(string key)
