@@ -1,7 +1,7 @@
 ﻿<Window x:Class="SMELuckyDraw.SunnyWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:my="clr-namespace:SMELuckyDraw.UC" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Lucky Prize" Height="720" Width="1024" WindowStartupLocation="CenterScreen" Topmost="True" Icon="goat.ico" KeyUp="Window_KeyUp">
+        Title="Lucky Prize" Height="740" Width="1024" WindowStartupLocation="CenterScreen" Topmost="True" Icon="goat.ico" KeyUp="Window_KeyUp">
     <Window.Background>
         <ImageBrush ImageSource="image/star5.jpg"/>
     </Window.Background>
