@@ -35,7 +35,7 @@
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>goat.ico</ApplicationIcon>
+    <ApplicationIcon>image\monkey.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=AMD64">
@@ -166,13 +166,13 @@
     <Content Include="excel\put name list excel file here and change the excel name in config file which in parent folder.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Resource Include="image\bg02.png" />
+    <Resource Include="image\bg01.png" />
+    <Resource Include="image\monkey.ico" />
     <Resource Include="image\LD.png" />
     <Resource Include="image\star5.jpg" />
-    <Resource Include="image\star1.jpg" />
-    <Resource Include="image\star4.jpg" />
     <Resource Include="image\SAP-Logo-144x71.jpg" />
     <Resource Include="image\sap.png" />
-    <Resource Include="image\bg.jpg" />
     <Resource Include="image\goat.ico" />
     <Resource Include="goat.ico" />
   </ItemGroup>

@@ -50,7 +50,7 @@ namespace SMELuckyDraw.UC
                 if (cdt != null)
                 {
                     NameItem name = new NameItem();
-                    name.NameValue = cdt.Name;
+                    name.NameValue = cdt.Id.Trim() + "  " + cdt.Name.Trim();
                     wrapPanelMain.Children.Add(name);
                     listName.Add(name);
                     name.TurnStart();
@@ -83,6 +83,11 @@ namespace SMELuckyDraw.UC
                 int value = (int)(number / Math.Pow(10, 5 - i));
                 var item = listName[i];
             }
+        }
+
+        public int GetCount()
+        {
+            return listName.Count;
         }
 
         public void Clear()

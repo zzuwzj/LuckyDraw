@@ -2,9 +2,9 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:my="clr-namespace:SMELuckyDraw.UC" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d"
-        Title="SME Lucky Draw" Height="740" Width="1024" WindowStyle="SingleBorderWindow" WindowStartupLocation="CenterScreen" Icon="goat.ico" KeyUp="Window_KeyUp" >
+        Title="SME Lucky Draw" Height="740" Width="1024" WindowStyle="SingleBorderWindow" WindowStartupLocation="CenterScreen" Icon="image/monkey.ico" KeyUp="Window_KeyUp" >
     <Window.Background>
-        <ImageBrush ImageSource="image/bg.jpg"/>
+        <ImageBrush ImageSource="image/bg01.png"/>
     </Window.Background>
     <Grid>
         <!--<Grid.Background>
@@ -68,13 +68,13 @@
                 </LinearGradientBrush>
             </TextBox.BorderBrush>
         </TextBox>-->
-        <Label Name="lbMsg" Grid.Row="6" Content="Please press ENTER to start!" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0" Panel.ZIndex="1001" Foreground="Blue" IsTabStop="True" TabIndex="1"/>
-        <my:NumberGroup Grid.Row="4" Height="311" HorizontalAlignment="Center" x:Name="numberGroupMain" Width="900" HorizontalContentAlignment="Center" VerticalAlignment="Top" Margin="0" TabIndex="1" />
-        <Label Name="lbWinner" Content="" HorizontalAlignment="Center" Margin="0" Grid.Row="3" VerticalAlignment="Center" FontSize="48" FontWeight="Bold" Foreground="#FF6BBA70" />
+        <Label Name="lbMsg" Grid.Row="6" Content="Please press ENTER to start!" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0" Panel.ZIndex="1001" Foreground="#FF7BFFFF" IsTabStop="True" TabIndex="1" Background="#0CFFFFFF"/>
+        <my:NumberGroup Grid.Row="4" Height="311" HorizontalAlignment="Center" x:Name="numberGroupMain" Width="900" HorizontalContentAlignment="Center" VerticalAlignment="Top" Margin="58,10,58,0" TabIndex="1" />
+        <Label Name="lbWinner" Content="" HorizontalAlignment="Center" Margin="0" Grid.Row="3" VerticalAlignment="Center" FontSize="48" FontWeight="Bold" Foreground="#FF64FFDA" Background="#33000000" />
         <Image HorizontalAlignment="Left" Height="71" Margin="5,5,0,0" Grid.Row="1" VerticalAlignment="Top" Width="144" Source="image/SAP-Logo-144x71.jpg" Stretch="None" >
         </Image>
-        <Label Content="SME Lucky Draw - 2015" HorizontalAlignment="Left" Margin="160,0,5,9" Grid.Row="1" VerticalAlignment="Center" FontSize="40" FontFamily="Segoe UI" FontWeight="Bold" Foreground="#f0ab00"/>
-        <Button Name="btnRest" Content="Reset" HorizontalAlignment="Right" Margin="0,0,10,0" Grid.Row="6" VerticalAlignment="Bottom" Width="60" Height="30" FontSize="16" IsTabStop="False" Click="btnRest_Click" GotFocus="btnRest_GotFocus" Padding="0">
+        <Label Content=" SME Lucky Draw - 2016  " HorizontalAlignment="Left" Margin="148,4,0,4" Grid.Row="1" VerticalAlignment="Center" FontSize="46" FontFamily="Segoe UI" FontWeight="Bold" Foreground="#FFFF5252" Background="#66000000"/>
+        <Button Name="btnRest" Content="Reset" HorizontalAlignment="Right" Margin="0,0,10,4" Grid.Row="6" VerticalAlignment="Bottom" Width="60" Height="35" FontSize="16" IsTabStop="False" Click="btnRest_Click" GotFocus="btnRest_GotFocus" Padding="0" FontWeight="Bold" Foreground="#FF004D00">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
                     <GradientStop Color="#FFF3F3F3" Offset="0"/>
@@ -84,7 +84,7 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <Button x:Name="btnSunny" Content="Lucky Prize" HorizontalAlignment="Right" Margin="0,0,80,0" Grid.Row="6" VerticalAlignment="Bottom" Width="110" Height="30" FontSize="16" IsTabStop="False" Click="btnSunny_Click" GotFocus="btnSunny_GotFocus" Padding="0">
+        <Button x:Name="btnSunny" Content="Lucky Prize" HorizontalAlignment="Right" Margin="0,0,80,4" Grid.Row="6" VerticalAlignment="Bottom" Width="110" Height="35" FontSize="16" IsTabStop="False" Click="btnSunny_Click" GotFocus="btnSunny_GotFocus" Padding="0" FontWeight="Bold" Foreground="#FF004D40">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
                     <GradientStop Color="#FFF3F3F3" Offset="0"/>
@@ -97,7 +97,7 @@
         <Button x:Name="btnBlank" Content="Button" HorizontalAlignment="Right" Margin="0" Grid.Row="6" Width="1" BorderBrush="#00000000"></Button>
         <Button x:Name="btnAbout" Content="" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="6" VerticalAlignment="Bottom" Width="32" Height="32" GotFocus="Button_GotFocus" BorderThickness="0" BorderBrush="#00707070" ToolTip="Source code is here" Click="btnAbout_Click">
             <Button.Background>
-                <ImageBrush ImageSource="goat.ico"/>
+                <ImageBrush ImageSource="image/monkey.ico"/>
             </Button.Background>
         </Button>
     </Grid>

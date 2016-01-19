@@ -29,6 +29,7 @@ namespace SMELuckyDraw
         private bool isRunning = false;
         private readonly string DEFAULT_LABEL = "Wish you lucky!";
         private readonly string DEFAULT_LABEL_CONGRAT = "Contratulations!";
+        private readonly int DEFAULT_MAX_COUNT = 20;
 
         public SunnyWindow()
         {
@@ -52,11 +53,16 @@ namespace SMELuckyDraw
             if (_counter % 10 == 0)
             {
                 int count = nameGroupMain.AddRandomName();
-                if (count >= 30)
+                if (count >= DEFAULT_MAX_COUNT)
                 {
                     timer.Stop();
                     isRunning = false;
                     lbName.Content = DEFAULT_LABEL_CONGRAT;
+                    LogHelper.INFO("End lucky prize draw");
+                    LogHelper.INFO("Total Winners: " + _logic.GetExceptionCount());
+                    LogHelper.SEPARATE();
+                    LogHelper.SEPARATE();
+                    LogHelper.NEWLINE();
                 }
                 lbCount.Content = _logic.GetExceptionCount();
             }
@@ -65,12 +71,18 @@ namespace SMELuckyDraw
         private void btnStart_Click(object sender, RoutedEventArgs e)
         {
             //nameGroupMain.TurnStart();
+            if (nameGroupMain.GetCount() >= DEFAULT_MAX_COUNT)
+            {
+                nameGroupMain.Clear();
+            }
             timer.Start();
             isRunning = true;
-            LogHelper.INFO("");
-            LogHelper.INFO("=============================");
+            // LogHelper.INFO("");
+            // LogHelper.INFO("==========================================");
+            LogHelper.NEWLINE();
+            LogHelper.SEPARATE();
             LogHelper.INFO("Total Winners: " + _logic.GetExceptionCount());
-            LogHelper.INFO("Start lucky draw");
+            LogHelper.INFO("Start lucky prize draw");
         }
 
         private void btnStop_Click(object sender, RoutedEventArgs e)
@@ -78,9 +90,12 @@ namespace SMELuckyDraw
             timer.Stop();
             lbName.Content = DEFAULT_LABEL_CONGRAT;
             isRunning = false;
-            LogHelper.INFO("End lucky draw");
+            LogHelper.INFO("End lucky prize draw");
             LogHelper.INFO("Total Winners: " + _logic.GetExceptionCount());
-            LogHelper.INFO("=============================\r\n");
+            // LogHelper.INFO("=========================================\r\n");
+            LogHelper.SEPARATE();
+            LogHelper.SEPARATE();
+            LogHelper.NEWLINE();
         }
 
         private void Window_KeyUp(object sender, KeyEventArgs e)
@@ -91,16 +106,26 @@ namespace SMELuckyDraw
                 {
                     timer.Stop();
                     lbName.Content = DEFAULT_LABEL_CONGRAT;
-                    LogHelper.INFO("End lucky draw");
+                    LogHelper.INFO("End lucky prize draw");
                     LogHelper.INFO("Total Winners: " + _logic.GetExceptionCount());
-                    LogHelper.INFO("=============================\r\n");
+                    // LogHelper.INFO("=========================================\r\n");
+                    LogHelper.SEPARATE();
+                    LogHelper.SEPARATE();
+                    LogHelper.NEWLINE();
                 }
                 else
                 {
+                    // clear if full
+                    if (nameGroupMain.GetCount() >= DEFAULT_MAX_COUNT)
+                    {
+                        nameGroupMain.Clear();
+                    }
                     timer.Start();
-                    LogHelper.INFO("=============================");
+                    // LogHelper.INFO("=====================================");
+                    LogHelper.NEWLINE();
+                    LogHelper.SEPARATE();
                     LogHelper.INFO("Total Winners: " + _logic.GetExceptionCount());
-                    LogHelper.INFO("Start lucky draw");
+                    LogHelper.INFO("Start lucky prize draw");
                 }
                 isRunning = !isRunning;
             }

@@ -1,9 +1,9 @@
 ﻿<Window x:Class="SMELuckyDraw.SunnyWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:my="clr-namespace:SMELuckyDraw.UC" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Lucky Prize" Height="740" Width="1024" WindowStartupLocation="CenterScreen" Topmost="True" Icon="goat.ico" KeyUp="Window_KeyUp">
+        Title="Lucky Prize" Height="740" Width="1024" WindowStartupLocation="CenterScreen" Topmost="True" Icon="image/monkey.ico" KeyUp="Window_KeyUp">
     <Window.Background>
-        <ImageBrush ImageSource="image/star5.jpg"/>
+        <ImageBrush ImageSource="image/bg02.png"/>
     </Window.Background>
     <Grid>
         <Grid.RowDefinitions>
@@ -16,8 +16,8 @@
             <RowDefinition Height="5"/>
         </Grid.RowDefinitions>
         <Label Grid.Row="0" Background="#FFF0AB00"></Label>
-        <Label Content="SME Lucky Draw - Lucky Prize" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="1" VerticalAlignment="Center" FontSize="30" FontFamily="Segoe UI" FontWeight="Bold" Foreground="#FF4DAF7B" Height="40" Width="420" Padding="0"/>
-        <my:NameGroup Grid.Row="4" Height="550" x:Name="nameGroupMain" Width="950" HorizontalContentAlignment="Center" VerticalAlignment="Top" Margin="10,0" Grid.RowSpan="2" Background="Transparent" />
+        <Label Content=" SME Lucky Draw - Lucky Prize  " HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="1" VerticalAlignment="Center" FontSize="30" FontFamily="Segoe UI" FontWeight="Bold" Foreground="#FF18FFFF" Height="40" Width="450" Padding="0" Background="#66000000"/>
+        <my:NameGroup Grid.Row="4" Height="550" x:Name="nameGroupMain" Width="950" HorizontalContentAlignment="Center" VerticalAlignment="Top" Margin="10,0" Grid.RowSpan="2" Background="#33000000" />
         <Button x:Name="btnStart" Content="Start" HorizontalAlignment="Center" Margin="0,0,150,0" Grid.Row="5" VerticalAlignment="Center" Width="120" Height="40" FontSize="16" FontWeight="Bold" Click="btnStart_Click" Visibility="Hidden">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
@@ -28,7 +28,7 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <Label x:Name="lbName" Content="Wish you lucky!" HorizontalAlignment="Center" Margin="0" Grid.Row="3" VerticalAlignment="Center" FontSize="40" Foreground="#FFFF7F00" Padding="0"/>
+        <Label x:Name="lbName" Content="Wish you lucky!" HorizontalAlignment="Center" Margin="0" Grid.Row="3" VerticalAlignment="Center" FontSize="40" Foreground="#FFEEFF41" Padding="0" Background="#00000000" FontWeight="Bold"/>
         <Button x:Name="btnStop" HorizontalAlignment="Center" Margin="150,0,0,0" Grid.Row="5" VerticalAlignment="Center" Width="120" Height="40" FontSize="16" FontWeight="Bold" Click="btnStop_Click" Visibility="Hidden">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
@@ -40,7 +40,7 @@
             </Button.Background>
             <Button Content="Button" Width="75"/>
         </Button>
-        <Button x:Name="btnClear" Content="Clear" HorizontalAlignment="Left" Margin="10,0,0,10" Grid.Row="5" VerticalAlignment="Bottom" Width="50" Height="25" FontSize="16" Click="btnClear_Click" Padding="0" IsTabStop="False" GotFocus="btnClear_GotFocus">
+        <Button x:Name="btnClear" Content="Clear" HorizontalAlignment="Left" Margin="10,0,0,3" Grid.Row="5" VerticalAlignment="Bottom" Width="60" Height="30   " FontSize="16" Click="btnClear_Click" Padding="0" IsTabStop="False" GotFocus="btnClear_GotFocus" FontWeight="Bold" Foreground="#FF004D40">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
                     <GradientStop Color="#FFF3F3F3" Offset="0"/>
@@ -52,5 +52,6 @@
         </Button>
         <Label x:Name="lbCount" Content="0" HorizontalAlignment="Right" Margin="0,0,10,0" Grid.Row="5" VerticalAlignment="Center"  FontSize="26" Foreground="#FFFF7F00"/>
         <Button x:Name="btnBlank" Content="" HorizontalAlignment="Left" Margin="0" Grid.Row="5" Width="1" Height="1"/>
+        <Label x:Name="lbMsg" Grid.Row="5" Content="Please press ENTER to start!" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="422,16,400,12" Panel.ZIndex="1001" Foreground="#FF7BFFFF" IsTabStop="True" TabIndex="1" Background="#0CFFFFFF" Width="194"/>
     </Grid>
 </Window>

@@ -10,6 +10,8 @@ namespace SMELuckyDraw.Util
     public class LogHelper
     {
         private static ILog log = LogManager.GetLogger("SMELuckyDraw.LogHelper");
+        private static string SEP_LINE = "======================================";
+
         public static void INFO(string msg, Exception e = null)
         {
             log.Info(msg, e);
@@ -33,6 +35,16 @@ namespace SMELuckyDraw.Util
         public static void FATAL(string msg, Exception e = null)
         {
             log.Fatal(msg, e);
+        }
+
+        public static void SEPARATE()
+        {
+            log.Info(SEP_LINE);
+        }
+
+        public static void NEWLINE()
+        {
+            log.Info("\r\n");
         }
     }
 }
