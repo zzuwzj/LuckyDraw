@@ -170,7 +170,6 @@
     <Resource Include="image\bg01.png" />
     <Resource Include="image\monkey.ico" />
     <Resource Include="image\LD.png" />
-    <Resource Include="image\star5.jpg" />
     <Resource Include="image\SAP-Logo-144x71.jpg" />
     <Resource Include="image\sap.png" />
     <Resource Include="image\goat.ico" />

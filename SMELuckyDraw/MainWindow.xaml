@@ -73,7 +73,7 @@
         <Label Name="lbWinner" Content="" HorizontalAlignment="Center" Margin="0" Grid.Row="3" VerticalAlignment="Center" FontSize="48" FontWeight="Bold" Foreground="#FF64FFDA" Background="#33000000" />
         <Image HorizontalAlignment="Left" Height="71" Margin="5,5,0,0" Grid.Row="1" VerticalAlignment="Top" Width="144" Source="image/SAP-Logo-144x71.jpg" Stretch="None" >
         </Image>
-        <Label Content=" SME Lucky Draw - 2016  " HorizontalAlignment="Left" Margin="148,4,0,4" Grid.Row="1" VerticalAlignment="Center" FontSize="46" FontFamily="Segoe UI" FontWeight="Bold" Foreground="#FFFF5252" Background="#66000000"/>
+        <Label Content=" SME Lucky Draw  " HorizontalAlignment="Left" Margin="148,4,0,4" Grid.Row="1" VerticalAlignment="Center" FontSize="46" FontFamily="Segoe UI" FontWeight="Bold" Foreground="#FFFF5252" Background="#66000000"/>
         <Button Name="btnRest" Content="Reset" HorizontalAlignment="Right" Margin="0,0,10,4" Grid.Row="6" VerticalAlignment="Bottom" Width="60" Height="35" FontSize="16" IsTabStop="False" Click="btnRest_Click" GotFocus="btnRest_GotFocus" Padding="0" FontWeight="Bold" Foreground="#FF004D00">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
